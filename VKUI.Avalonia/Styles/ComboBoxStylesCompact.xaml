@@ -16,6 +16,10 @@
         <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightCompact}"/>
     </Style>
 
+    <Style Selector=".Compact ComboBox /template/ controls|VKIcon#DropdownIcon">
+        <Setter Property="Id" Value="{x:Static controls:VKIconNames.Icon20Dropdown}" />
+    </Style>
+
     <Style Selector=".Compact ComboBox /template/ TextBlock#PlaceholderTextBlock">
         <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}" />
         <Setter Property="LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />

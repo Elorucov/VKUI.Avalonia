@@ -22,6 +22,7 @@
         <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextRegularLineHeight}" />
         <Setter Property="PlaceholderForeground" Value="{DynamicResource VKColorTextSecondary}" />
         <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <ControlTemplate>
                 <Panel>
@@ -63,7 +64,7 @@
                             ClickMode="Press"
                             Focusable="False"
                             IsChecked="{TemplateBinding IsDropDownOpen, Mode=TwoWay}">
-                            <controls:VKIcon Id="{x:Static controls:VKIconNames.Icon24ChevronDown}" Foreground="{DynamicResource VKColorIconSecondary}"/>
+                            <controls:VKIcon Name="DropdownIcon" Id="{x:Static controls:VKIconNames.Icon24Dropdown}" Foreground="{DynamicResource VKColorIconSecondary}"/>
                         </ToggleButton>
                         <Popup Name="PART_Popup"
                             MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
@@ -86,24 +87,34 @@
                     </Grid>
                 </Panel>
             </ControlTemplate>
-        </Setter>
+        </Setter>        
+
+        <Style Selector="^.Plain">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
 
        <Style Selector="^:pointerover">
             <Setter Property="Background" Value="{DynamicResource VKColorFieldBackgroundHover}"/>
             <Setter Property="BorderBrush" Value="{DynamicResource VKColorFieldBorderAlphaHover}"/>
         </Style>
+        
+        <Style Selector="^.Plain:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentHover}"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
 
-        <Style Selector="^:focus">
+        <Style Selector="^:focus, ^.Plain:focus">
             <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccent}"/>
         </Style>
-        <Style Selector="^:focus:pointerover">
+        <Style Selector="^:focus:pointerover, ^.Plain:focus:pointerover">
             <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccentHover}"/>
         </Style>
 
-        <Style Selector="^:error, ^:error:focus">
+        <Style Selector="^:error, ^:error:focus, ^.Plain:error, ^.Plain:error:focus">
             <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegative}"/>
         </Style>
-        <Style Selector="^:error:pointerover, ^:error:focus:pointerover">
+        <Style Selector="^:error:pointerover, ^:error:focus:pointerover,  ^.Plain:error:pointerover, ^.Plain:error:focus:pointerover">
             <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegativeHover}"/>
         </Style>
 
@@ -111,10 +122,6 @@
             <Setter Property="Opacity" Value="{StaticResource VKOpacityDisable}"/>
             <Setter Property="Cursor" Value="Arrow"/>
         </Style>
-
-<!--        <Style Selector="^ /template/ ToggleButton#toggle:checked /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Background" Value="Transparent" />
-        </Style>-->
 
     </ControlTheme>
 </ResourceDictionary>

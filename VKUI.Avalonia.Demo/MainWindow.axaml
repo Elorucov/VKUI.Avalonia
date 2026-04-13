@@ -168,6 +168,13 @@
                                 <ComboBoxItem>Lena</ComboBoxItem>
                                 <ComboBoxItem>Nastya</ComboBoxItem>
                             </ComboBox>
+
+                            <ComboBox Margin="12,0,12,12" Classes="Plain" PlaceholderText="Choose something...">
+                                <ComboBoxItem>Anna</ComboBoxItem>
+                                <ComboBoxItem>Gunel</ComboBoxItem>
+                                <ComboBoxItem>Lena</ComboBoxItem>
+                                <ComboBoxItem>Nastya</ComboBoxItem>
+                            </ComboBox>
                         </StackPanel>
                     </Border>
                 </StackPanel>

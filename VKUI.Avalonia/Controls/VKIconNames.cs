@@ -99,6 +99,7 @@
         public const string Icon24Document = "Icon24Document";
         public const string Icon24Done = "Icon24Done";
         public const string Icon24DoneOutline = "Icon24DoneOutline";
+        public const string Icon24Dropdown = "Icon24Dropdown";
         public const string Icon24Gallery = "Icon24Gallery";
         public const string Icon24KeyboardBotsOutline = "Icon24KeyboardBotsOutline";
         public const string Icon24Link = "Icon24Link";
