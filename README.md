@@ -8,13 +8,14 @@
   <img alt="Windows screenshot" src="Screenshots/demo_2026.04.13.png">
 </picture>
 
+
 > [!WARNING]
-> Originally, the library was a separate project within [Laney-Avalonia](https://github.com/Elorucov/Laney-Avalonia) and used outdated tokens (colors, sizes, etc.). It was then separated into a standalone independent library and is currently undergoing refactoring.
+> Originally, the library was a project within [Laney-Avalonia](https://github.com/Elorucov/Laney-Avalonia) and used outdated tokens (colors, sizes, etc.). It was then separated into a standalone independent library and is currently undergoing refactoring.
 
 The library contains styles and components for many controls, however only the following ones are ready:
 
-* Button
-* Checkbox
-* ComboBox
-* RadioButton
-* TextBox
+* `Button`
+* `CheckBox`
+* `ComboBox`
+* `RadioButton`
+* `TextBox`
