@@ -1,0 +1,120 @@
+<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions"
+    xmlns:mex="using:VKUI.Extensions.Markup"
+    xmlns:controls="using:VKUI.Controls">
+    <ControlTheme x:Key="{x:Type ComboBox}" TargetType="ComboBox">
+        <Setter Property="Background" Value="{DynamicResource VKColorFieldBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource VKColorFieldBorderAlpha}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="Padding" Value="12,0"/>
+        <Setter Property="ex:PaddingEx.Top" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightRegular}, Child={StaticResource VKTextRegularLineHeight}}"/>
+        <Setter Property="ex:PaddingEx.Bottom" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightRegular}, Child={StaticResource VKTextRegularLineHeight}}"/>
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightRegular}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontSize" Value="{StaticResource VKTextRegularFontSize}" />
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextRegularLineHeight}" />
+        <Setter Property="PlaceholderForeground" Value="{DynamicResource VKColorTextSecondary}" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Panel>
+                    <Panel.Styles>
+					    <Style Selector="ComboBox /template/ ContentControl#PART_ContentControl > TextBlock, ComboBoxItem > TextBlock">
+                            <Setter Property="FontSize" Value="{StaticResource VKTextRegularFontSize}" />
+			                <Setter Property="LineHeight" Value="{StaticResource VKTextRegularLineHeight}" />
+                        </Style>
+                    </Panel.Styles>
+                    <Border Name="border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}"/>
+                    <Grid ColumnDefinitions="*,Auto">
+                        <TextBlock Name="PlaceholderTextBlock"
+                            Grid.Column="0"
+                            Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Foreground="{TemplateBinding PlaceholderForeground}"
+                            FontSize="{TemplateBinding FontSize}"
+                            LineHeight="{TemplateBinding (TextBlock.LineHeight)}"
+                            IsVisible="{TemplateBinding SelectionBoxItem, Converter={x:Static ObjectConverters.IsNull}}"
+                            Text="{TemplateBinding PlaceholderText}" />
+                        <ContentControl Name="PART_ContentControl" Margin="{TemplateBinding Padding}"
+                            HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding SelectionBoxItem}"
+                            FontSize="{TemplateBinding FontSize}"
+                            ContentTemplate="{TemplateBinding ItemTemplate}">
+                        </ContentControl>
+                        <ToggleButton Name="toggle"
+                            Grid.Column="1"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            MinWidth="{StaticResource VKSizeFieldHeightRegular}"
+                            ClickMode="Press"
+                            Focusable="False"
+                            IsChecked="{TemplateBinding IsDropDownOpen, Mode=TwoWay}">
+                            <controls:VKIcon Id="{x:Static controls:VKIconNames.Icon24ChevronDown}" Foreground="{DynamicResource VKColorIconSecondary}"/>
+                        </ToggleButton>
+                        <Popup Name="PART_Popup"
+                            MinWidth="{Binding Bounds.Width, RelativeSource={RelativeSource TemplatedParent}}"
+                            MaxHeight="{TemplateBinding MaxDropDownHeight}"
+                            IsLightDismissEnabled="True"
+                            IsOpen="{TemplateBinding IsDropDownOpen, Mode=TwoWay}"
+                            PlacementTarget="{TemplateBinding}">
+                            <Border Background="{DynamicResource VKColorBackgroundContrastThemed}"
+                                CornerRadius="8"
+                                BorderThickness="1"
+                                Padding="0,4"
+                                BorderBrush="{DynamicResource VKColorFieldBorderAlpha}">
+                                <ScrollViewer HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                    VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
+                                    <ItemsPresenter Name="PART_ItemsPresenter"
+                                        ItemsPanel="{TemplateBinding ItemsPanel}"/>
+                                </ScrollViewer>
+                            </Border>
+                        </Popup>
+                    </Grid>
+                </Panel>
+            </ControlTemplate>
+        </Setter>
+
+       <Style Selector="^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorFieldBackgroundHover}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorFieldBorderAlphaHover}"/>
+        </Style>
+
+        <Style Selector="^:focus">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccent}"/>
+        </Style>
+        <Style Selector="^:focus:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccentHover}"/>
+        </Style>
+
+        <Style Selector="^:error, ^:error:focus">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegative}"/>
+        </Style>
+        <Style Selector="^:error:pointerover, ^:error:focus:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegativeHover}"/>
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="{StaticResource VKOpacityDisable}"/>
+            <Setter Property="Cursor" Value="Arrow"/>
+        </Style>
+
+<!--        <Style Selector="^ /template/ ToggleButton#toggle:checked /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="Transparent" />
+        </Style>-->
+
+    </ControlTheme>
+</ResourceDictionary>

@@ -1,0 +1,134 @@
+﻿<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions">
+    <ControlTheme x:Key="{x:Type RadioButton}" TargetType="RadioButton">
+        <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeBasePaddingHorizontalRegular}" />
+        <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeBasePaddingHorizontalRegular}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimary}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightRegular}" />
+        <Setter Property="TextElement.FontSize" Value="{StaticResource VKTextRegularFontSize}" />
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextRegularLineHeight}" />
+        <Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <ControlTemplate TargetType="RadioButton">
+                <Border Name="PART_Border"
+                Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                CornerRadius="{TemplateBinding CornerRadius}">
+                    <Grid ColumnDefinitions="Auto,*" Margin="{TemplateBinding Padding}">
+                        <Grid Name="EllipsesRoot" VerticalAlignment="Center" Width="24" Height="24">
+                            <Ellipse Name="OuterEllipse" Margin="1"
+                                Width="22" Height="22"
+                                UseLayoutRounding="False"
+                                StrokeThickness="2" />
+                            <Ellipse Name="CheckOuterEllipse" Margin="1"
+                                Width="22" Height="22"
+                                UseLayoutRounding="False"
+                                StrokeThickness="2" />
+                            <Ellipse Name="CheckGlyph"
+                                Width="14" Height="14"
+                                UseLayoutRounding="False" />
+                        </Grid>
+                        <ContentPresenter Name="PART_ContentPresenter"
+                              Content="{TemplateBinding Content}"
+                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                              TextElement.Foreground="{TemplateBinding Foreground}"
+                              Margin="12,0,0,0"
+                              ex:MarginEx.Top="{StaticResource VKSpacingSizeXl}"
+                              ex:MarginEx.Bottom="{StaticResource VKSpacingSizeXl}"
+                              RecognizesAccessKey="True"
+                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                              Grid.Column="1" />
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:pointerover /template/ Border#PART_Border">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentHover}" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ Border#PART_Border">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentActive}" />
+        </Style>
+
+        <Style Selector="^ /template/ Ellipse#OuterEllipse">
+            <Setter Property="Stroke" Value="{DynamicResource VKColorIconTertiary}" />
+            <Setter Property="Fill" Value="Transparent" />
+        </Style>
+        <Style Selector="^ /template/ Ellipse#CheckOuterEllipse">
+            <Setter Property="Stroke" Value="{DynamicResource VKColorIconAccent}" />
+            <Setter Property="Fill" Value="Transparent" />
+            <Setter Property="Opacity" Value="0" />
+        </Style>
+        <Style Selector="^ /template/ Ellipse#CheckGlyph">
+            <Setter Property="Opacity" Value="0" />
+            <Setter Property="Stroke" Value="Transparent" />
+            <Setter Property="Fill" Value="Transparent" />
+        </Style>
+
+        <!-- Хотел состояния для pointerover, pressed, и т. д. в одном selector-е написать, но чёт не сработало... -->
+        <!-- Poiner over state -->
+        <Style Selector="^:pointerover /template/ Ellipse#OuterEllipse">
+            <Setter Property="Stroke" Value="{DynamicResource VKColorIconTertiaryHover}" />
+            <Setter Property="Fill" Value="Transparent" />
+        </Style>
+        <Style Selector="^:pointerover /template/ Ellipse#CheckOuterEllipse">
+            <Setter Property="Stroke" Value="{DynamicResource VKColorIconAccentHover}" />
+            <Setter Property="Fill" Value="Transparent" />
+            <Setter Property="Opacity" Value="0" />
+        </Style>
+        <Style Selector="^:pointerover /template/ Ellipse#CheckGlyph">
+            <Setter Property="Opacity" Value="0" />
+            <Setter Property="Stroke" Value="Transparent" />
+            <Setter Property="Fill" Value="Transparent" />
+        </Style>
+
+        <!-- Pressed state -->
+        <Style Selector="^:pressed /template/ Ellipse#OuterEllipse">
+            <Setter Property="Stroke" Value="{DynamicResource VKColorIconTertiaryHover}" />
+            <Setter Property="Fill" Value="Transparent" />
+        </Style>
+        <Style Selector="^:pressed /template/ Ellipse#CheckOuterEllipse">
+            <Setter Property="Stroke" Value="{DynamicResource VKColorIconAccentHover}" />
+            <Setter Property="Fill" Value="Transparent" />
+            <Setter Property="Opacity" Value="0" />
+        </Style>
+        <Style Selector="^:pressed /template/ Ellipse#CheckGlyph">
+            <Setter Property="Opacity" Value="0" />
+            <Setter Property="Stroke" Value="Transparent" />
+            <Setter Property="Fill" Value="Transparent" />
+        </Style>
+
+        <!-- Disabled State -->
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="{StaticResource VKOpacityDisable}"/>
+            <Setter Property="Cursor" Value="Arrow"/>
+        </Style>
+
+        <!-- Checked State -->
+        <Style Selector="^:checked /template/ Ellipse#CheckGlyph">
+            <Setter Property="Opacity" Value="1" />
+            <Setter Property="Fill" Value="{DynamicResource VKColorIconAccent}"/>
+        </Style>
+        <Style Selector="^:checked /template/ Ellipse#OuterEllipse">
+            <Setter Property="Opacity" Value="0" />
+        </Style>
+        <Style Selector="^:checked /template/ Ellipse#CheckOuterEllipse">
+            <Setter Property="Opacity" Value="1" />
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

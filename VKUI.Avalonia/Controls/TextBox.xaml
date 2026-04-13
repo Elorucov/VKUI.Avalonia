@@ -1,0 +1,108 @@
+<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions"
+    xmlns:mex="using:VKUI.Extensions.Markup">
+    <ControlTheme x:Key="{x:Type TextBox}" TargetType="TextBox">
+        <Setter Property="Background" Value="{DynamicResource VKColorFieldBackground}"/>
+        <Setter Property="BorderBrush" Value="{DynamicResource VKColorFieldBorderAlpha}"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Padding" Value="12,0"/>
+        <Setter Property="ex:PaddingEx.Top" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightRegular}, Child={StaticResource VKTextRegularLineHeight}}"/>
+        <Setter Property="ex:PaddingEx.Bottom" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightRegular}, Child={StaticResource VKTextRegularLineHeight}}"/>
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightRegular}"/>
+        <Setter Property="FontSize" Value="{StaticResource VKTextRegularFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource VKTextRegularLineHeight}" />
+        <Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimary}"/>
+        <Setter Property="PlaceholderForeground" Value="{DynamicResource VKColorTextSecondary}"/>
+        <Setter Property="CaretBrush" Value="{DynamicResource VKColorTextPrimary}"/>
+        <Setter Property="SelectionBrush" Value="{DynamicResource VKColorBackgroundAccent}"/>
+        <Setter Property="SelectionForegroundBrush" Value="{DynamicResource VKColorTextContrast}"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <DataValidationErrors>
+                    <DataValidationErrors.ErrorTemplate>
+                        <DataTemplate/>
+                        <!-- to remove exclamation mark -->
+                    </DataValidationErrors.ErrorTemplate>
+                    <Panel>
+                        <Border
+                            Name="PART_BorderElement"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            MinWidth="{TemplateBinding MinWidth}"
+                            MinHeight="{TemplateBinding MinHeight}"></Border>
+                        <Grid ColumnDefinitions="Auto,*,Auto" >
+                                <ContentPresenter Grid.Column="0" Grid.ColumnSpan="1" Content="{TemplateBinding InnerLeftContent}"/>
+                                <DockPanel x:Name="PART_InnerDockPanel" Grid.Column="1" Grid.ColumnSpan="1" Margin="{TemplateBinding Padding}">
+                                    <ScrollViewer HorizontalScrollBarVisibility="{TemplateBinding (ScrollViewer.HorizontalScrollBarVisibility)}"
+                                VerticalScrollBarVisibility="{TemplateBinding (ScrollViewer.VerticalScrollBarVisibility)}"
+                                AllowAutoHide="{TemplateBinding (ScrollViewer.AllowAutoHide)}">
+                                        <Panel>
+                                            <TextBlock Name="placeholder"
+                                                Opacity="1"
+                                                Foreground="{TemplateBinding PlaceholderForeground}"
+                                                Text="{TemplateBinding PlaceholderText}"
+                                                TextAlignment="{TemplateBinding TextAlignment}"
+                                                TextWrapping="{TemplateBinding TextWrapping}"
+                                                IsVisible="{TemplateBinding Text, Converter={x:Static StringConverters.IsNullOrEmpty}}"
+                                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                FontSize="{TemplateBinding FontSize, Mode=OneWay}"
+                                                LineHeight="{TemplateBinding LineHeight, Mode=OneWay}"
+                                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                            <TextPresenter Name="PART_TextPresenter"
+                                                    Text="{TemplateBinding Text, Mode=TwoWay}"
+                                                    CaretIndex="{TemplateBinding CaretIndex}"
+                                                    SelectionStart="{TemplateBinding SelectionStart}"
+                                                    SelectionEnd="{TemplateBinding SelectionEnd}"
+                                                    TextAlignment="{TemplateBinding TextAlignment}"
+                                                    TextWrapping="{TemplateBinding TextWrapping}"
+                                                    PasswordChar="{TemplateBinding PasswordChar}"
+                                                    RevealPassword="{TemplateBinding RevealPassword}"
+                                                    SelectionBrush="{TemplateBinding SelectionBrush}"
+                                                    SelectionForegroundBrush="{TemplateBinding SelectionForegroundBrush}"
+                                                    CaretBrush="{TemplateBinding CaretBrush}"
+                                                    LineHeight="{TemplateBinding LineHeight}"
+                                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" 
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                        </Panel>
+                                    </ScrollViewer>
+                                </DockPanel>
+                                <ContentPresenter Grid.Column="2" Grid.ColumnSpan="1" Content="{TemplateBinding InnerRightContent}"/>
+                            </Grid>
+                    </Panel>
+                </DataValidationErrors>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorFieldBackgroundHover}"/>
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorFieldBorderAlphaHover}"/>
+        </Style>
+
+        <Style Selector="^:focus">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccent}"/>
+        </Style>
+        <Style Selector="^:focus:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccentHover}"/>
+        </Style>
+
+        <Style Selector="^:error, ^:error:focus">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegative}"/>
+        </Style>
+        <Style Selector="^:error:pointerover, ^:error:focus:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegativeHover}"/>
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="{StaticResource VKOpacityDisable}"/>
+            <Setter Property="Cursor" Value="Arrow"/>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

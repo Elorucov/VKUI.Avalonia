@@ -1,0 +1,32 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions">
+    <Style Selector=".Compact RadioButton">
+        <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeBasePaddingHorizontalCompact}" />
+        <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeBasePaddingHorizontalCompact}" />
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightCompact}" />
+        <Setter Property="TextElement.FontSize" Value="{StaticResource VKTextCompactFontSize}" />
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />
+        <Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+    </Style>
+    <Style Selector=".Compact RadioButton /template/ Grid#EllipsesRoot">
+        <Setter Property="Width" Value="20" />
+        <Setter Property="Height" Value="20" />
+    </Style>
+    <Style Selector=".Compact RadioButton /template/ Ellipse#OuterEllipse, .Compact RadioButton /template/ Ellipse#CheckOuterEllipse">
+        <Setter Property="Width" Value="18" />
+        <Setter Property="Height" Value="18" />
+    </Style>
+    <Style Selector=".Compact RadioButton /template/ Ellipse#CheckGlyph">
+        <Setter Property="Width" Value="11" />
+        <Setter Property="Height" Value="11" />
+    </Style>
+    <Style Selector=".Compact RadioButton /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="ex:MarginEx.Top" Value="{StaticResource VKSpacingSizeM}"/>
+        <Setter Property="ex:MarginEx.Bottom" Value="{StaticResource VKSpacingSizeM}"/>
+    </Style>
+</Styles>

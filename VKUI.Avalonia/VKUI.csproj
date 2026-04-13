@@ -1,0 +1,167 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>disable</Nullable>
+    <!--Avalonia doesen't support TrimMode=link currently,but we are working on that https://github.com/AvaloniaUI/Avalonia/issues/6892 -->
+    <TrimMode>copyused</TrimMode>
+    <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <NoWarn>8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <NoWarn>8632</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Label="Avalonia">
+    <AvaloniaXamlVerboseExceptions>True</AvaloniaXamlVerboseExceptions>
+  </PropertyGroup>
+  <ItemGroup>
+    <AvaloniaXaml Remove="Fonts\VKSansDisplay\**" />
+    <AvaloniaXaml Remove="Fonts\VKSansText\**" />
+    <Compile Remove="Fonts\VKSansDisplay\**" />
+    <Compile Remove="Fonts\VKSansText\**" />
+    <EmbeddedResource Remove="Fonts\VKSansDisplay\**" />
+    <EmbeddedResource Remove="Fonts\VKSansText\**" />
+    <None Remove="Fonts\VKSansDisplay\**" />
+    <None Remove="Fonts\VKSansText\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove=".gitignore" />
+    <None Remove="Controls\ActionSheetItem.xaml" />
+    <None Remove="Controls\Avatar.xaml" />
+    <None Remove="Controls\Button.xaml" />
+    <None Remove="Controls\CarouselEx.xaml" />
+    <None Remove="Controls\Cell.xaml" />
+    <None Remove="Controls\PanelHeader.xaml" />
+    <None Remove="Controls\Placeholder.xaml" />
+    <None Remove="Controls\ScrollBar.xaml" />
+    <None Remove="Controls\ScrollViewer.xaml" />
+    <None Remove="Controls\Spinner.xaml" />
+    <None Remove="Controls\VKIcon.xaml" />
+    <None Remove="Controls\VKUIFlyoutPresenter.xaml" />
+    <None Remove="Controls\WindowNotificationManager.xaml" />
+    <None Remove="Controls\WindowTitleBar.xaml" />
+    <None Remove="Fonts\VKSansDisplay-Bold.otf" />
+    <None Remove="Fonts\VKSansDisplay-Regular.otf" />
+    <None Remove="Fonts\VKSansText-Bold.ttf" />
+    <None Remove="Fonts\VKSansText-Light.ttf" />
+    <None Remove="Fonts\VKSansText-Medium.ttf" />
+    <None Remove="Fonts\VKSansText-Regular.ttf" />
+    <None Remove="Fonts\VKSansText-SemiBold.ttf" />
+    <None Remove="Icons.xaml" />
+    <None Remove="Styles\CommonStyles.xaml" />
+    <None Remove="Styles\ListBoxStyles.xaml" />
+    <None Remove="Styles\NotificationCardStyles.xaml" />
+    <None Remove="Styles\TabStyles.xaml" />
+    <None Remove="Styles\ToggleSwitchStyles.xaml" />
+    <None Remove="Typography.xaml" />
+    <None Remove="VKUITheme.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <!--This helps with theme dll-s trimming.
+	If you will publish your application in self-contained mode with p:PublishTrimmed=true and it will use Fluent theme Default theme will be trimmed from the output and vice versa.
+	https://github.com/AvaloniaUI/Avalonia/issues/5593 -->
+    <TrimmableAssembly Include="Avalonia.Themes.Fluent" />
+    <TrimmableAssembly Include="Avalonia.Themes.Default" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="12.0.0" />
+    <PackageReference Include="Avalonia.Themes.Simple" Version="12.0.0" />
+    <PackageReference Include="Avalonia" Version="12.0.0" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.0.0" />
+    <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="**/*.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Remove="Styles\ComboBoxStylesCompact.xaml" />
+    <AvaloniaResource Remove="Styles\CommonStyles.xaml" />
+    <AvaloniaResource Remove="Styles\ListBoxStyles.xaml" />
+    <AvaloniaResource Remove="Styles\NotificationCardStyles.xaml" />
+    <AvaloniaResource Remove="Styles\TabStyles.xaml" />
+    <AvaloniaResource Remove="Styles\ToggleSwitchStyles.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaXaml Remove="Tokens\Colors.axaml" />
+    <AvaloniaXaml Remove="Tokens\Fonts.axaml" />
+    <AvaloniaXaml Remove="Tokens\Sizes.axaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Fonts\VKSansText-Bold.ttf" />
+    <AvaloniaResource Include="Fonts\VKSansText-Light.ttf" />
+    <AvaloniaResource Include="Fonts\VKSansText-Medium.ttf" />
+    <AvaloniaResource Include="Fonts\VKSansText-Regular.ttf" />
+    <AvaloniaResource Include="Fonts\VKSansText-SemiBold.ttf" />
+    <AvaloniaResource Include="Fonts\VKSansDisplay-Bold.otf" />
+    <AvaloniaResource Include="Fonts\VKSansDisplay-Regular.otf" />
+    <AvaloniaResource Include="Tokens\Colors.axaml" />
+    <AvaloniaResource Include="Tokens\Fonts.axaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Include="Tokens\Sizes.axaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaXaml Include="Styles\ComboBoxStylesCompact.xaml" />
+    <AvaloniaXaml Include="Styles\CommonStyles.xaml" />
+    <AvaloniaXaml Include="Styles\ListBoxStyles.xaml" />
+    <AvaloniaXaml Include="Controls\NotificationCard.xaml">
+      <Generator></Generator>
+    </AvaloniaXaml>
+    <AvaloniaXaml Include="Styles\TabStyles.xaml" />
+    <AvaloniaXaml Include="Controls\ToggleSwitch.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Update="Controls\CarouselEx.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\CheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\ComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\ComboBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\RadioButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\ScrollBar.xaml">
+      <Generator></Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\ScrollViewer.xaml">
+      <Generator></Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\TextBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\WindowNotificationManager.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Controls\Cell.xaml.cs">
+      <DependentUpon>Controls\Cell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\PanelHeader.xaml.cs">
+      <DependentUpon>Controls\PanelHeader.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\Placeholder.xaml.cs">
+      <DependentUpon>Controls\Placeholder.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\Spinner.xaml.cs">
+      <DependentUpon>Controls\Spinner.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\VKIcon.xaml.cs">
+      <DependentUpon>Controls\VKIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\VKUIFlyoutPresenter.xaml.cs">
+      <DependentUpon>Controls\VKUIFlyoutPresenter.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Controls\WindowTitleBar.xaml.cs">
+      <DependentUpon>Controls\WindowTitleBar.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+</Project>

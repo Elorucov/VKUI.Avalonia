@@ -1,0 +1,118 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vkui="using:VKUI.Controls">
+    <Design.PreviewWith>
+        <StackPanel Width="360" Background="{DynamicResource VKColorBackground}">
+
+          <Border Classes="Group">
+            <StackPanel>
+              <Grid Classes="GroupHeader">
+                <TextBlock Text="Group title"/>
+              </Grid>
+              <CheckBox Margin="12,0" Content="Anna"/>
+              <CheckBox Margin="12,0" Content="Lena" IsEnabled="False"/>
+              <CheckBox Margin="12,0" Content="Nastya" IsChecked="True"/>
+
+              <Rectangle Margin="12,6" Classes="Separator"/>
+
+              <RadioButton Margin="12,0" GroupName="TestBest" Content="Anna"/>
+              <RadioButton Margin="12,0" GroupName="TestBest" Content="Lena" IsEnabled="False"/>
+              <RadioButton Margin="12,0" GroupName="TestBest" Content="Nastya" IsChecked="True"/>
+            </StackPanel>
+          </Border>
+
+          <Border Classes="Group">
+            <StackPanel Margin="12">
+              <ProgressBar Margin="0,6" Value="75"/>
+              <ProgressBar Margin="0,6,0,12" IsIndeterminate="True"/>
+            </StackPanel>
+          </Border>
+        </StackPanel>
+    </Design.PreviewWith>
+
+  <!-- Common styles for some elements -->
+
+  <Style Selector="Window">
+    <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContent}"/>
+    <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimary}"/>
+  </Style>
+
+  <Style Selector="Window.Dialog">
+    <Setter Property="CanResize" Value="False"/>
+    <Setter Property="ShowInTaskbar" Value="False"/>
+    <Setter Property="ExtendClientAreaToDecorationsHint" Value="True"/>
+    <Setter Property="WindowDecorations" Value="Full"/>
+    <Setter Property="ExtendClientAreaTitleBarHeightHint" Value="-1"/>  <!-- чтобы системная тень в винде отображалась -->
+    <Setter Property="Width" Value="540"/>
+    <Setter Property="Height" Value="612"/>
+  </Style>
+
+<!--  <Style Selector="MenuFlyoutPresenter">
+    <Setter Property="Background" Value="{DynamicResource VKColorBackgroundModal}"/>
+    <Setter Property="BorderBrush" Value="{DynamicResource VKontakteColorModalCardBorderAlpha}"/>
+    <Setter Property="CornerRadius" Value="8"/>
+  </Style>-->
+
+  <Style Selector="Separator">
+    <Setter Property="Height" Value="0.5" />
+    <Setter Property="Background" Value="{DynamicResource VKColorSeparatorPrimary}" />
+    <Setter Property="Margin" Value="12,0" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+  </Style>
+
+  <Style Selector="Rectangle.Separator">
+    <Setter Property="Fill" Value="{DynamicResource VKColorSeparatorPrimary}" />
+    <Setter Property="Height" Value="0.5" />
+    <Setter Property="Margin" Value="0,6" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+  </Style>
+
+  <Style Selector="Rectangle.ActionSheetSeparator">
+    <Setter Property="Fill" Value="{DynamicResource VKontakteColorActionSheetSeparatorAlpha}" />
+    <Setter Property="Height" Value="0.5" />
+    <Setter Property="Margin" Value="12,4" />
+    <Setter Property="HorizontalAlignment" Value="Stretch" />
+  </Style>
+
+  <Style Selector="vkui|VKUIFlyoutPresenter Rectangle.Separator">
+    <Setter Property="Margin" Value="18,6" />
+  </Style>
+
+  <!-- VKUI Group -->
+
+  <Style Selector="Border.Group">
+    <Setter Property="Margin" Value="11,0,11,11" />
+    <Setter Property="CornerRadius" Value="12" />
+    <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContent}" />
+    <!-- <Setter Property="BorderBrush" Value="{DynamicResource VKSeparatorCommonBrush}" />
+    <Setter Property="BorderThickness" Value="1" />-->
+  </Style>
+
+  <Style Selector="Grid.GroupHeader">
+    <Setter Property="Margin" Value="12,0" />
+  </Style>
+
+  <Style Selector=".GroupHeader > TextBlock:nth-child(1)">
+    <Setter Property="Margin" Value="0,12,0,10" />
+    <Setter Property="FontSize" Value="14" />
+    <Setter Property="LineHeight" Value="18" />
+    <Setter Property="FontWeight" Value="Medium" />
+    <Setter Property="Foreground" Value="{DynamicResource VKColorTextSecondary}" />
+  </Style>
+
+  <!-- Progress bar -->
+  <Style Selector="ProgressBar">
+    <Setter Property="Background" Value="{DynamicResource VKColorSeparatorPrimary}"/>
+    <Setter Property="Foreground" Value="{DynamicResource VKColorIconAccent}"/>
+    <Setter Property="CornerRadius" Value="1"/>
+  </Style>
+
+  <Style Selector="ProgressBar /template/ Border, ProgressBar:indeterminate /template/ Border">
+    <Setter Property="CornerRadius" Value="1"/>
+  </Style>
+
+  <Style Selector="ProgressBar:horizontal">
+    <Setter Property="MinWidth" Value="64"/>
+    <Setter Property="MinHeight" Value="2"/>
+  </Style>
+</Styles>

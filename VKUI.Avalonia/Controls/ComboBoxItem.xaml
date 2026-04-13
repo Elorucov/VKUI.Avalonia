@@ -1,0 +1,47 @@
+<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions"
+    xmlns:mex="using:VKUI.Extensions.Markup">
+    <ControlTheme x:Key="{x:Type ComboBoxItem}" TargetType="ComboBoxItem">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Padding" Value="12,0"/>
+        <Setter Property="ex:PaddingEx.Top" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightRegular}, Child={StaticResource VKTextRegularLineHeight}}"/>
+        <Setter Property="ex:PaddingEx.Bottom" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightRegular}, Child={StaticResource VKTextRegularLineHeight}}"/>
+        <Setter Property="CornerRadius" Value="8" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="FontSize" Value="{StaticResource VKTextRegularFontSize}" />
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextRegularLineHeight}" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Border Name="PART_Selection" CornerRadius="8" Margin="4,0" Background="{TemplateBinding Background}"/>
+                    <ContentPresenter Name="PART_ContentPresenter"
+                        Padding="{TemplateBinding Padding}"
+                        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+                        FontSize="{TemplateBinding FontSize}"
+                        LineHeight="{TemplateBinding (TextBlock.LineHeight)}"
+                        Content="{TemplateBinding Content}"
+                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                        CornerRadius="{TemplateBinding CornerRadius}">
+                        <ContentPresenter.Styles>
+						    <Style Selector="TextBlock">
+                                <!-- Required, because Avalonia inserts TextBlock without any classes, and template's FontSize ignored. -->
+			                    <Setter Property="FontSize" Value="{Binding #PART_ContentPresenter.FontSize}" />
+			                    <Setter Property="LineHeight" Value="{Binding #PART_ContentPresenter.LineHeight}" />
+                            </Style>
+                        </ContentPresenter.Styles>
+                    </ContentPresenter>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+        <Style Selector="^:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentHover}" />
+        </Style>
+        <Style Selector="^:selected">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentActive}" />
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

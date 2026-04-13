@@ -1,0 +1,47 @@
+<Styles xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions">
+    
+    <Style Selector="Button">
+        <Setter Property="MinWidth" Value="{StaticResource VKSizeButtonMinimumWidthCompact}"/>
+        <Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusCompact}"/>
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusCompact}"/>
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusCompact}"/>
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusCompact}"/>
+    </Style>
+
+    <Style Selector=".Compact Button, .Compact Button.Small">
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeButtonSmallHeightCompact}"/>
+        <Setter Property="FontSize" Value="{StaticResource VKSubheadCompactFontSize}"/>
+        <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeButtonBaseSmallPaddingHorizontalCompact}"/>
+        <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeButtonBaseSmallPaddingHorizontalCompact}"/>
+    </Style>
+    <Style Selector=".Compact Button /template/ ContentPresenter#PART_Presenter, .Compact Button.Small /template/ ContentPresenter#PART_Presenter">
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKSubheadCompactLineHeight}"/>
+    </Style>
+
+    <Style Selector=".Compact Button.Medium">
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeButtonMediumHeightCompact}"/>
+        <Setter Property="FontSize" Value="{StaticResource VKHeadline2CompactFontSize}"/>
+        <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeButtonBaseMediumPaddingHorizontalCompact}"/>
+        <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeButtonBaseMediumPaddingHorizontalCompact}"/>
+    </Style>
+    <Style Selector=".Compact Button.Medium /template/ ContentPresenter#PART_Presenter">
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKHeadline2CompactLineHeight}"/>
+    </Style>
+
+    <Style Selector=".Compact Button.Large">
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeButtonLargeHeightCompact}"/>
+        <Setter Property="FontSize" Value="{StaticResource VKHeadline1CompactFontSize}"/>
+        <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeButtonBaseLargePaddingHorizontalCompact}"/>
+        <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeButtonBaseLargePaddingHorizontalCompact}"/>
+    </Style>
+    <Style Selector=".Compact Button.Large /template/ ContentPresenter#PART_Presenter">
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKHeadline1CompactLineHeight}"/>
+    </Style>
+    
+    <Style Selector="Button.Link">
+        <Setter Property="ex:PaddingEx.Left" Value="0"/>
+        <Setter Property="ex:PaddingEx.Right" Value="0"/>
+    </Style>
+</Styles>

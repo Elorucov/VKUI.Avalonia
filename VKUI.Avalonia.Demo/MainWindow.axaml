@@ -1,0 +1,177 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:system="using:System"
+        mc:Ignorable="d" d:DesignWidth="960" d:DesignHeight="640"
+        x:Class="VKUI.Avalonia.Demo.MainWindow"
+        MinWidth="960" MinHeight="640"
+        Background="{DynamicResource VKColorBackground}"
+        Title="VKUI Avalonia Demo">
+
+    <Window.Styles>
+		<Style Selector="Border.Group">
+			<Setter Property="Margin" Value="6"/>
+        </Style>
+    </Window.Styles>
+
+    <ScrollViewer>
+		<Grid ColumnDefinitions="* *" RowDefinitions="Auto Auto" MaxWidth="1280" VerticalAlignment="Top" Margin="6">
+            <StackPanel Grid.ColumnSpan="2">
+				<Border Classes="Group">
+					<StackPanel MinHeight="44">
+						<CheckBox Content="Compact" VerticalAlignment="Center" IsCheckedChanged="CheckBox_IsCheckedChanged"/>
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+
+		    <StackPanel Grid.Row="1">
+				<StackPanel>
+				    <Border Classes="Group">
+                        <StackPanel>
+                            <Grid Classes="GroupHeader">
+                                <TextBlock Text="CHECKBOXES AND RADIO GROUPS"/>
+                            </Grid>
+                            <CheckBox Content="Anna"/>
+                            <CheckBox Content="Lena" IsEnabled="False"/>
+                            <CheckBox Content="Nastya" IsChecked="True"/>
+                            <CheckBox Content="Gunel" IsChecked="True" IsEnabled="False"/>
+
+                            <CheckBox Content="Indeterminate" IsThreeState="True" IsChecked="{x:Null}"/>
+
+                            <Rectangle Margin="12,6" Classes="Separator"/>
+
+                            <RadioButton GroupName="TestBest1" Content="Anna" IsEnabled="False"/>
+                            <RadioButton GroupName="TestBest2" Content="Lena"/>
+                            <RadioButton GroupName="TestBest1" Content="Nastya" IsEnabled="False" IsChecked="True"/>
+                            <RadioButton GroupName="TestBest2" Content="Gunel" IsChecked="True"/>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <StackPanel>
+				<Border Classes="Group">
+                    <StackPanel>
+                        <Grid Classes="GroupHeader">
+                            <TextBlock Text="TYPOGRAPHY"/>
+                        </Grid>
+                        <StackPanel Margin="12,0,12,12">
+							<TextBlock Classes="DisplayTitle1" Text="DisplayTitle1 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="DisplayTitle2" Text="DisplayTitle2 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="DisplayTitle3" Text="DisplayTitle3 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="DisplayTitle4" Text="DisplayTitle4 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Title1" Text="Title1 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Title2" Text="Title2 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Title3" Text="Title3 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Headline" Text="Headline Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Headline1" Text="Headline1 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Headline2" Text="Headline2 Hello VKUI.Avalonia!"/>
+							<TextBlock Text="Text Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Paragraph" Text="Paragraph Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Subhead" Text="Subhead Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Footnote" Text="Footnote Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Caption1" Text="Caption1 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Caption2" Text="Caption2 Hello VKUI.Avalonia!"/>
+							<TextBlock Classes="Caption3" Text="Caption3 Hello VKUI.Avalonia!"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                </StackPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="1">
+				<StackPanel Spacing="12">
+					<Border Classes="Group">
+                    <StackPanel>
+                        <Grid Classes="GroupHeader">
+                            <TextBlock Text="BUTTONS"/>
+                        </Grid>
+                        <StackPanel Margin="12,0,12,12" Spacing="6" Orientation="Horizontal">
+                            <Button Classes="Primary Accent" Content="Primary"/>
+                            <Button Classes="Outline Accent" Content="Outline"/>
+                            <Button Classes="Secondary Accent" Content="Secondary"/>
+                            <Button Classes="Tertiary Accent" Content="Tertiary"/>
+                            <Button Classes="Link Accent" Content="Link"/>
+                        </StackPanel>
+                        <StackPanel Margin="12,0,12,12" Spacing="6" Orientation="Horizontal">
+                            <Button Classes="Primary AccentInvariable" Content="Primary"/>
+                            <Button Classes="Outline AccentInvariable" Content="Outline"/>
+                            <Button Classes="Secondary AccentInvariable" Content="Secondary"/>
+                            <Button Classes="Tertiary AccentInvariable" Content="Tertiary"/>
+                            <Button Classes="Link AccentInvariable" Content="Link"/>
+                        </StackPanel>
+                        <StackPanel Margin="12,0,12,12" Spacing="6" Orientation="Horizontal">
+                            <Button Classes="Primary Positive" Content="Primary"/>
+                            <Button Classes="Outline Positive" Content="Outline"/>
+                            <Button Classes="Secondary Positive" Content="Secondary"/>
+                            <Button Classes="Tertiary Positive" Content="Tertiary"/>
+                            <Button Classes="Link Positive" Content="Link"/>
+                        </StackPanel>
+                        <StackPanel Margin="12,0,12,12" Spacing="6" Orientation="Horizontal">
+                            <Button Classes="Primary Negative" Content="Primary"/>
+                            <Button Classes="Outline Negative" Content="Outline"/>
+                            <Button Classes="Secondary Negative" Content="Secondary"/>
+                            <Button Classes="Tertiary Negative" Content="Tertiary"/>
+                            <Button Classes="Link Negative" Content="Link"/>
+                        </StackPanel>
+                        <StackPanel Margin="12,0,12,6" Spacing="6" Orientation="Horizontal">
+                            <Button Classes="Primary Neutral" Content="Primary"/>
+                            <Button Classes="Outline Neutral" Content="Outline"/>
+                            <Button Classes="Secondary Neutral" Content="Secondary"/>
+                            <Button Classes="Tertiary Neutral" Content="Tertiary"/>
+                            <Button Classes="Link Neutral" Content="Link"/>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,0,6">
+                            <StackPanel.Background>
+								<LinearGradientBrush StartPoint="0%,100%" EndPoint="0%,0%">
+									<LinearGradientBrush.GradientStops>
+										<GradientStop Offset="0" Color="#007acc"/>
+										<GradientStop Offset="1" Color="#00cc7a"/>
+										<GradientStop/>
+                                    </LinearGradientBrush.GradientStops>
+                                </LinearGradientBrush>
+                            </StackPanel.Background>
+                            <StackPanel Margin="12,6" Spacing="6" Orientation="Horizontal">
+                                <Button Classes="Primary Overlay" Content="Primary"/>
+                                <Button Classes="Outline Overlay" Content="Outline"/>
+                                <Button Classes="Secondary Overlay" Content="Secondary"/>
+                                <Button Classes="Tertiary Overlay" Content="Tertiary"/>
+                                <Button Classes="Link Overlay" Content="Link"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Margin="12,0,12,12" Spacing="6" Orientation="Horizontal">
+                            <Button VerticalAlignment="Center" Classes="Small" Content="Primary"/>
+                            <Button VerticalAlignment="Center" Classes="Medium" Content="Medium"/>
+                            <Button VerticalAlignment="Center" Classes="Large" Content="Large"/>
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+                </StackPanel>
+            
+                <StackPanel>
+					<Border Classes="Group">
+                        <StackPanel>
+							<Grid Classes="GroupHeader">
+                                <TextBlock Text="FIELDS"/>
+                            </Grid>
+                            <TextBox Margin="12,0,12,12" PlaceholderText="Simple TextBox"/>
+                            <TextBox Margin="12,0,12,12" IsEnabled="False" PlaceholderText="Disabled"/>
+                            <TextBox Margin="12,0,12,12" PlaceholderText="With error">
+                                <DataValidationErrors.Error>
+									<system:ApplicationException/>
+                                </DataValidationErrors.Error>
+                            </TextBox>
+
+                            <ComboBox Margin="12,0,12,12" PlaceholderText="Choose something...">
+                                <ComboBoxItem>Anna</ComboBoxItem>
+                                <ComboBoxItem>Gunel</ComboBoxItem>
+                                <ComboBoxItem>Lena</ComboBoxItem>
+                                <ComboBoxItem>Nastya</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
+</Window>

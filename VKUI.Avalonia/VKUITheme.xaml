@@ -1,0 +1,57 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vkui="using:VKUI.Controls"
+        x:Class="VKUI.VKUITheme">
+  <Styles.Resources>
+    <ResourceDictionary>
+      <BoxShadows x:Key="VKElevation1">0 0 2 #08000000, 0 2 2 #0F000000</BoxShadows>
+      <BoxShadows x:Key="VKElevation2">0 4 8 #0A000000, 0 0 4 #0F000000</BoxShadows>
+      <BoxShadows x:Key="VKElevation3">0 0 2 #14000000, 0 4 16 #14000000</BoxShadows>
+      <BoxShadows x:Key="VKElevation4">0 0 8 #1F000000, 0 16 16 #29000000</BoxShadows>
+
+      <x:Double x:Key="TextDefaultLetterSpacing">-0.2</x:Double>
+
+      <!-- To remove margin in NavigationControl -->
+      <Thickness x:Key="NavigationControlPageMargin">0</Thickness>
+      
+      <ResourceDictionary.MergedDictionaries>
+        <ResourceInclude Source="avares://VKUI/Tokens/Fonts.axaml"/>
+        <ResourceInclude Source="avares://VKUI/Tokens/Sizes.axaml"/>
+        <ResourceInclude Source="avares://VKUI/Tokens/Colors.axaml"/>
+        <ResourceInclude Source="avares://VKUI/Icons.xaml"/>
+
+        <ResourceInclude Source="avares://VKUI/Controls/ActionSheetItem.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/Avatar.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/Button.xaml"/>
+        <ResourceInclude Source="avares://VKUI/Controls/CarouselEx.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/Cell.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/CheckBox.xaml"/>
+        <ResourceInclude Source="avares://VKUI/Controls/ComboBox.xaml"/>
+        <ResourceInclude Source="avares://VKUI/Controls/ComboBoxItem.xaml"/>
+        <ResourceInclude Source="avares://VKUI/Controls/NotificationCard.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/PanelHeader.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/Placeholder.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/RadioButton.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/ScrollBar.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/ScrollViewer.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/Spinner.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/TextBox.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/ToggleSwitch.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/VKIcon.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/VKUIFlyoutPresenter.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/WindowTitleBar.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/WindowNotificationManager.xaml" />
+      </ResourceDictionary.MergedDictionaries>
+    </ResourceDictionary>
+  </Styles.Resources>
+
+  <StyleInclude Source="/Typography.xaml"/>
+  <StyleInclude Source="/Styles/CommonStyles.xaml"/>
+  <StyleInclude Source="/Styles/ButtonStylesCompact.axaml"/>
+  <StyleInclude Source="/Styles/CheckBoxStylesCompact.axaml"/>
+  <StyleInclude Source="/Styles/ComboBoxStylesCompact.xaml"/>
+  <StyleInclude Source="/Styles/ListBoxStyles.xaml"/>
+  <StyleInclude Source="/Styles/RadioButtonStylesCompact.axaml"/>
+  <StyleInclude Source="/Styles/TabStyles.xaml"/>
+  <StyleInclude Source="/Styles/TextBoxStylesCompact.axaml"/>
+</Styles>

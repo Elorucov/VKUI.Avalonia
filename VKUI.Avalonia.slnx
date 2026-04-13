@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="VKUI.Avalonia.Demo/VKUI.Avalonia.Demo.csproj" />
+  <Project Path="VKUI.Avalonia/VKUI.csproj" />
+</Solution>

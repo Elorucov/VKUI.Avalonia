@@ -1,0 +1,19 @@
+<Styles
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions"
+    xmlns:mex="using:VKUI.Extensions.Markup">
+    <Style Selector=".Compact TextBox">
+        <Setter Property="ex:PaddingEx.Top" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
+        <Setter Property="ex:PaddingEx.Bottom" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightCompact}"/>
+        <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />
+    </Style>
+
+    <!-- Required! -->
+    <Style Selector=".Compact TextBox /template/ TextBlock#placeholder">
+        <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />
+    </Style>
+</Styles>

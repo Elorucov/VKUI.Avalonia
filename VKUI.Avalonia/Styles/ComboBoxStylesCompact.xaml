@@ -1,0 +1,35 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vkui="using:VKUI.Controls"
+        xmlns:ex="using:VKUI.Extensions"
+        xmlns:mex="using:VKUI.Extensions.Markup"
+        xmlns:controls="using:VKUI.Controls">
+    <Style Selector=".Compact ComboBox">
+        <Setter Property="ex:PaddingEx.Top" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
+        <Setter Property="ex:PaddingEx.Bottom" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
+		<Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusCompact}" />
+        <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}" />
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightCompact}"/>
+    </Style>
+
+    <Style Selector=".Compact ComboBox /template/ TextBlock#PlaceholderTextBlock">
+        <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}" />
+        <Setter Property="LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />
+    </Style>
+
+    <Style Selector=".Compact ComboBoxItem">
+        <Setter Property="ex:PaddingEx.Top" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
+        <Setter Property="ex:PaddingEx.Bottom" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
+        <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}" />
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />
+    </Style>
+
+    <Style Selector=".Compact ComboBox /template/ ContentControl#PART_ContentControl > TextBlock, .Compact ComboBoxItem > TextBlock">
+        <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}" />
+	    <Setter Property="LineHeight" Value="{StaticResource VKTextCompactLineHeight}" />
+    </Style>
+</Styles>

@@ -1,0 +1,237 @@
+<Styles xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Style Selector="Window">
+    <Setter Property="TextElement.FontFamily" Value="{StaticResource VKSansText}"/>
+    <Setter Property="TextElement.LetterSpacing" Value="{StaticResource TextDefaultLetterSpacing}"/>
+  </Style>
+
+  <Style Selector="TextBlock">
+    <Setter Property="ClipToBounds" Value="False"/>
+  </Style>
+
+  <Style Selector="TextBlock, TextBlock.Paragraph">
+    <Setter Property="FontSize" Value="{StaticResource VKParagraphRegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKParagraphRegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKParagraphRegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKParagraphRegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock, .Compact TextBlock.Paragraph">
+    <Setter Property="FontSize" Value="{StaticResource VKParagraphCompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKParagraphCompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKParagraphCompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKParagraphCompactFontWeight}"/>
+  </Style>
+
+  <Style Selector="TextBlock.DisplayTitle1">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle1RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle1RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle1RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle1RegularFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.DisplayTitle1">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle1CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle1CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle1CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle1CompactFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector="TextBlock.DisplayTitle2">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle2RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle2RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle2RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle2RegularFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.DisplayTitle2">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle2CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle2CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle2CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle2CompactFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector="TextBlock.DisplayTitle3">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle3RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle3RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle3RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle3RegularFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.DisplayTitle3">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle3CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle3CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle3CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle3CompactFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector="TextBlock.DisplayTitle4">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle4RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle4RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle4RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle4RegularFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.DisplayTitle4">
+    <Setter Property="FontSize" Value="{StaticResource VKDisplayTitle4CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKDisplayTitle4CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKDisplayTitle4CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKDisplayTitle4CompactFontWeight}"/>
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+  <Style Selector="TextBlock.Title1">
+    <Setter Property="FontSize" Value="{StaticResource VKTitle1RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTitle1RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTitle1RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTitle1RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Title1">
+    <Setter Property="FontSize" Value="{StaticResource VKTitle1CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTitle1CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTitle1CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTitle1CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Title2">
+    <Setter Property="FontSize" Value="{StaticResource VKTitle2RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTitle2RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTitle2RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTitle2RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Title2">
+    <Setter Property="FontSize" Value="{StaticResource VKTitle2CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTitle2CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTitle2CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTitle2CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Title3">
+    <Setter Property="FontSize" Value="{StaticResource VKTitle3RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTitle3RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTitle3RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTitle3RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Title3">
+    <Setter Property="FontSize" Value="{StaticResource VKTitle3CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTitle3CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTitle3CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTitle3CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Headline1">
+    <Setter Property="FontSize" Value="{StaticResource VKHeadline1RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKHeadline1RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKHeadline1RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKHeadline1RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Headline1">
+    <Setter Property="FontSize" Value="{StaticResource VKHeadline1CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKHeadline1CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKHeadline1CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKHeadline1CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Headline2">
+    <Setter Property="FontSize" Value="{StaticResource VKHeadline2RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKHeadline2RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKHeadline2RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKHeadline2RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Headline2">
+    <Setter Property="FontSize" Value="{StaticResource VKHeadline2CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKHeadline2CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKHeadline2CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKHeadline2CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Text">
+    <Setter Property="FontSize" Value="{StaticResource VKTextRegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTextRegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTextRegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTextRegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Text">
+    <Setter Property="FontSize" Value="{StaticResource VKTextCompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKTextCompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKTextCompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKTextCompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Subhead">
+    <Setter Property="FontSize" Value="{StaticResource VKSubheadRegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKSubheadRegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKSubheadRegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKSubheadRegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Subhead">
+    <Setter Property="FontSize" Value="{StaticResource VKSubheadCompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKSubheadCompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKSubheadCompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKSubheadCompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Footnote">
+    <Setter Property="FontSize" Value="{StaticResource VKFootnoteRegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKFootnoteRegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKFootnoteRegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKFootnoteRegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Footnote">
+    <Setter Property="FontSize" Value="{StaticResource VKFootnoteCompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKFootnoteCompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKFootnoteCompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKFootnoteCompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Caption1">
+    <Setter Property="FontSize" Value="{StaticResource VKCaption1RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKCaption1RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKCaption1RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKCaption1RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Caption1">
+    <Setter Property="FontSize" Value="{StaticResource VKCaption1CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKCaption1CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKCaption1CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKCaption1CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Caption2">
+    <Setter Property="FontSize" Value="{StaticResource VKCaption2RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKCaption2RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKCaption2RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKCaption2RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Caption2">
+    <Setter Property="FontSize" Value="{StaticResource VKCaption2CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKCaption2CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKCaption2CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKCaption2CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Caption3">
+    <Setter Property="FontSize" Value="{StaticResource VKCaption3RegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKCaption3RegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKCaption3RegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKCaption3RegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Caption3">
+    <Setter Property="FontSize" Value="{StaticResource VKCaption3CompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKCaption3CompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKCaption3CompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKCaption3CompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Headline">
+    <Setter Property="FontSize" Value="{StaticResource VKHeadlineRegularFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKHeadlineRegularLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKHeadlineRegularLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKHeadlineRegularFontWeight}"/>
+  </Style>
+  <Style Selector=".Compact TextBlock.Headline">
+    <Setter Property="FontSize" Value="{StaticResource VKHeadlineCompactFontSize}"/>
+    <Setter Property="LineHeight" Value="{StaticResource VKHeadlineCompactLineHeight}"/>
+    <Setter Property="BaselineOffset" Value="{StaticResource VKHeadlineCompactLineHeight}"/>
+    <Setter Property="FontWeight" Value="{StaticResource VKHeadlineCompactFontWeight}"/>
+  </Style>
+  <Style Selector="TextBlock.Display">
+    <Setter Property="FontFamily" Value="{StaticResource VKSansDisplay}"/>
+    <Setter Property="LetterSpacing" Value="0"/>
+  </Style>
+</Styles>

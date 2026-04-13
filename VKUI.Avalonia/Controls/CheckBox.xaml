@@ -1,0 +1,80 @@
+﻿<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions">
+    <ControlTheme x:Key="{x:Type CheckBox}" TargetType="CheckBox">
+        <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeBasePaddingHorizontalRegular}" />
+        <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeBasePaddingHorizontalRegular}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimary}" />
+        <Setter Property="TextElement.FontSize" Value="{StaticResource VKTextRegularFontSize}" />
+        <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKTextRegularLineHeight}" />
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightRegular}" />
+        <Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusRegular}" />
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Border x:Name="PART_Border"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="{TemplateBinding CornerRadius}" />
+                    <Grid x:Name="RootGrid" Margin="{TemplateBinding Padding}" Background="Transparent" ColumnDefinitions="Auto,*">
+                        <Grid VerticalAlignment="Top" Height="{TemplateBinding MinHeight}">
+                            <Path x:Name="PART_Path"  VerticalAlignment="Center"/>
+                        </Grid>
+                        <ContentPresenter x:Name="ContentPresenter"
+                         ContentTemplate="{TemplateBinding ContentTemplate}"
+                         Content="{TemplateBinding Content}"
+                         TextElement.Foreground="{TemplateBinding Foreground}"
+                         Margin="12,0,0,0"
+                         ex:MarginEx.Top="{StaticResource VKSpacingSizeXl}"
+                         ex:MarginEx.Bottom="{StaticResource VKSpacingSizeXl}"
+                         RecognizesAccessKey="True"
+                         HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                         VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                         Grid.Column="1" />
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:pointerover /template/ Border#PART_Border">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentHover}" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ Border#PART_Border">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentActive}" />
+        </Style>
+
+        <Style Selector="^ /template/ Path#PART_Path">
+            <Setter Property="Fill" Value="{DynamicResource VKColorIconTertiary}" />
+            <Setter Property="Width" Value="24" />
+            <Setter Property="Height" Value="24" />
+            <Setter Property="Data" Value="{StaticResource Icon24CheckBoxOff}"/>
+        </Style>
+
+        <Style Selector="^:disabled">
+            <Setter Property="Opacity" Value="{StaticResource VKOpacityDisable}"/>
+            <Setter Property="Cursor" Value="Arrow"/>
+        </Style>
+
+        <Style Selector="^:checked /template/ Path#PART_Path">
+            <Setter Property="Fill" Value="{DynamicResource VKColorIconAccent}" />
+            <Setter Property="Data" Value="{StaticResource Icon24CheckBoxOn}"/>
+        </Style>
+
+        <Style Selector="^:indeterminate /template/ Path#PART_Path">
+            <Setter Property="Fill" Value="{DynamicResource VKColorIconAccent}" />
+            <Setter Property="Data" Value="{StaticResource Icon24CheckBoxIndeterminate}"/>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>

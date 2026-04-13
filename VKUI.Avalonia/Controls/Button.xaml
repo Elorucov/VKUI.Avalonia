@@ -1,0 +1,308 @@
+﻿<ResourceDictionary
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ex="using:VKUI.Extensions"
+    xmlns:vkui="using:VKUI.Controls">
+
+    <ControlTheme x:Key="{x:Type Button}" TargetType="Button">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="MinWidth" Value="{StaticResource VKSizeButtonMinimumWidthRegular}"/>
+        <Setter Property="MinHeight" Value="{StaticResource VKSizeButtonSmallHeightRegular}"/>
+        <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeButtonBaseSmallPaddingHorizontalRegular}"/>
+        <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeButtonBaseSmallPaddingHorizontalRegular}"/>
+        <Setter Property="ex:CornerRadiusEx.TopLeft" Value="{StaticResource VKSizeBorderRadiusRegular}"/>
+        <Setter Property="ex:CornerRadiusEx.TopRight" Value="{StaticResource VKSizeBorderRadiusRegular}"/>
+        <Setter Property="ex:CornerRadiusEx.BottomRight" Value="{StaticResource VKSizeBorderRadiusRegular}"/>
+        <Setter Property="ex:CornerRadiusEx.BottomLeft" Value="{StaticResource VKSizeBorderRadiusRegular}"/>
+        <Setter Property="BackgroundSizing" Value="InnerBorderEdge"/>
+        <Setter Property="Background" Value="{DynamicResource VKColorBackgroundAccentThemed}"/>
+        <Setter Property="Foreground" Value="{DynamicResource VKColorTextContrastThemed}"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Medium"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid x:Name="PART_Root" Cursor="Hand">
+                    <Border x:Name="PART_Background" Background="{TemplateBinding Background}" CornerRadius="{TemplateBinding CornerRadius}"/>
+                    <Border x:Name="PART_Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="{TemplateBinding CornerRadius}"/>
+                    <ContentPresenter x:Name="PART_Presenter"
+                          BorderThickness="{TemplateBinding BorderThickness}"
+                          CornerRadius="{TemplateBinding CornerRadius}"
+                          Content="{TemplateBinding Content}"
+                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                          Padding="{TemplateBinding Padding}"
+                          FontFamily="{TemplateBinding FontFamily}"
+                          TextElement.FontFamily="{TemplateBinding FontFamily}"
+                          TextElement.FontSize="{TemplateBinding FontSize}"
+                          TextElement.FontWeight="{TemplateBinding FontWeight}"
+                          RecognizesAccessKey="True"
+                          TextTrimming="CharacterEllipsis"
+                          HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+                          VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}" />
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+
+        <Style Selector="^:disabled /template/ Grid#PART_Root">
+            <Setter Property="Opacity" Value="0.64"/>
+        </Style>     
+
+        <!-- Colors -->
+
+        <Style Selector="^.Accent">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextAccentThemed}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Accent">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundAccentThemed}"/>
+        </Style>
+
+        <Style Selector="^:pointerover, ^.Primary.Accent:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundAccentThemedHover}"/>
+        </Style>
+
+        <Style Selector="^:pressed, ^.Primary.Accent:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundAccentThemedActive}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Positive">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundPositive}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Positive:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundPositiveHover}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Positive:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundPositiveActive}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Negative">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundNegative}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Negative:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundNegativeHover}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Negative:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundNegativeActive}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Neutral">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContentInverse}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Neutral:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContentInverseHover}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Neutral:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContentInverseActive}"/>
+        </Style>
+
+        <Style Selector="^.Primary.AccentInvariable">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundAccent}"/>
+        </Style>
+
+        <Style Selector="^.Primary.AccentInvariable:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundAccentHover}"/>
+        </Style>
+
+        <Style Selector="^.Primary.AccentInvariable:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundAccentActive}"/>
+        </Style>
+
+        <Style Selector="^.Secondary">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundSecondaryAlpha}"/>
+        </Style>
+
+        <Style Selector="^.Secondary:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundSecondaryAlphaHover}"/>
+        </Style>
+
+        <Style Selector="^.Secondary:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundSecondaryAlphaActive}"/>
+        </Style>
+                
+        <Style Selector="^.Outline, ^.Tertiary, ^.Link">
+            <Setter Property="Background" Value="Transparent"/>
+        </Style>
+                
+        <Style Selector="^.Outline:pointerover, ^.Tertiary:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentHover}"/>
+        </Style>
+                
+        <Style Selector="^.Outline:pressed, ^.Tertiary:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorTransparentActive}"/>
+        </Style>
+
+        <Style Selector="^.Accent">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextAccentThemed}"/>
+        </Style>
+
+        <Style Selector="^.Positive">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextPositive}"/>
+        </Style>
+
+        <Style Selector="^.Negative">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextNegative}"/>
+        </Style>
+
+        <Style Selector="^.Neutral">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimary}"/>
+        </Style>
+
+        <Style Selector="^.AccentInvariable">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextAccent}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Neutral, ^.Primary.Accent">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextContrastThemed}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Positive, ^.Primary.Negative, ^.Primary.AccentInvariable">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextContrast}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Accent">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccentThemed}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Positive">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokePositive}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Positive:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokePositiveHover}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Positive:pressed">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokePositiveActive}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Negative">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegative}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Negative:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegativeHover}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Negative:pressed">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeNegativeActive}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Neutral">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorFieldBorderAlpha}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Neutral:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundSecondaryHover}"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+
+        <Style Selector="^.Outline.Neutral:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundSecondaryActive}"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+        </Style>
+
+        <Style Selector="^.Outline.AccentInvariable">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeAccent}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Overlay">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContrast}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Overlay:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContrastHover}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Overlay:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContrastActive}"/>
+        </Style>
+
+        <Style Selector="^.Secondary.Overlay">
+            <Setter Property="Background" Value="{DynamicResource VKColorOverlayPrimary}"/>
+        </Style>
+
+        <Style Selector="^.Secondary.Overlay:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorOverlayPrimaryHover}"/>
+        </Style>
+
+        <Style Selector="^.Secondary.Overlay:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorOverlayPrimaryActive}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Overlay:pointerover, ^.Tertiary.Overlay:pointerover">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContrastSecondaryAlphaHover}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Overlay:pressed, ^.Tertiary.Overlay:pressed">
+            <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContrastSecondaryAlphaActive}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Overlay">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimaryInvariably}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Overlay:pointerover">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimaryInvariablyHover}"/>
+        </Style>
+
+        <Style Selector="^.Primary.Overlay:pressed">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimaryInvariablyActive}"/>
+        </Style>
+
+        <Style Selector="^.Secondary.Overlay, ^.Tertiary.Overlay, ^.Outline.Overlay, ^.Link.Overlay">
+            <Setter Property="Foreground" Value="{DynamicResource VKColorTextContrast}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Overlay">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeContrast}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Overlay:pointerover">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeContrastHover}"/>
+        </Style>
+
+        <Style Selector="^.Outline.Overlay:pressed">
+            <Setter Property="BorderBrush" Value="{DynamicResource VKColorStrokeContrastActive}"/>
+        </Style>
+
+        <!-- Sizes -->
+
+        <Style Selector="^, ^.Small">
+            <Setter Property="MinHeight" Value="{StaticResource VKSizeButtonSmallHeightRegular}"/>
+            <Setter Property="FontSize" Value="{StaticResource VKSubheadRegularFontSize}"/>
+            <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeButtonBaseSmallPaddingHorizontalRegular}"/>
+            <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeButtonBaseSmallPaddingHorizontalRegular}"/>
+        </Style>
+        <Style Selector="^ /template/ ContentPresenter#PART_Presenter, ^.Small /template/ ContentPresenter#PART_Presenter">
+            <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKSubheadRegularLineHeight}"/>
+        </Style>
+
+        <Style Selector="^.Medium">
+            <Setter Property="MinHeight" Value="{StaticResource VKSizeButtonMediumHeightRegular}"/>
+            <Setter Property="FontSize" Value="{StaticResource VKHeadline2RegularFontSize}"/>
+            <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeButtonBaseMediumPaddingHorizontalRegular}"/>
+            <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeButtonBaseMediumPaddingHorizontalRegular}"/>
+        </Style>
+        <Style Selector="^.Medium /template/ ContentPresenter#PART_Presenter">
+            <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKHeadline2RegularLineHeight}"/>
+        </Style>
+
+        <Style Selector="^.Large">
+            <Setter Property="MinHeight" Value="{StaticResource VKSizeButtonLargeHeightRegular}"/>
+            <Setter Property="FontSize" Value="{StaticResource VKHeadline1RegularFontSize}"/>
+            <Setter Property="ex:PaddingEx.Left" Value="{StaticResource VKSizeButtonBaseLargePaddingHorizontalRegular}"/>
+            <Setter Property="ex:PaddingEx.Right" Value="{StaticResource VKSizeButtonBaseLargePaddingHorizontalRegular}"/>
+        </Style>
+        <Style Selector="^.Large /template/ ContentPresenter#PART_Presenter">
+            <Setter Property="TextBlock.LineHeight" Value="{StaticResource VKHeadline1RegularLineHeight}"/>
+        </Style>
+    </ControlTheme>
+</ResourceDictionary>
