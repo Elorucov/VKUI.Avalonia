@@ -4,6 +4,7 @@
     xmlns:ex="using:VKUI.Extensions"
     xmlns:mex="using:VKUI.Extensions.Markup">
     <Style Selector=".Compact TextBox">
+        <Setter Property="Padding" Value="12,0"/>
         <Setter Property="ex:PaddingEx.Top" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
         <Setter Property="ex:PaddingEx.Bottom" Value="{mex:CalcRelative Parent={StaticResource VKSizeFieldHeightCompact}, Child={StaticResource VKTextCompactLineHeight}}"/>
         <Setter Property="MinHeight" Value="{StaticResource VKSizeFieldHeightCompact}"/>
