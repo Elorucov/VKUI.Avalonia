@@ -72,21 +72,6 @@
                         </StackPanel>
                     </Border>
                 </StackPanel>
-                <StackPanel>
-                    <Border Classes="Group">
-                        <StackPanel>
-                            <Grid Classes="GroupHeader">
-                                <TextBlock Text="SPINNER"/>
-                            </Grid>
-                            <StackPanel Margin="12,0,12,12" Orientation="Horizontal" Spacing="12">
-                                <vkui:Spinner Size="Small"/>
-                                <vkui:Spinner Size="Medium"/>
-                                <vkui:Spinner Size="Large"/>
-                                <vkui:Spinner Size="ExtraLarge"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Border>
-                </StackPanel>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="1">
                 <StackPanel Spacing="12">
@@ -181,6 +166,36 @@
                                 <ComboBoxItem>Lena</ComboBoxItem>
                                 <ComboBoxItem>Nastya</ComboBoxItem>
                             </ComboBox>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <StackPanel>
+                    <Border Classes="Group">
+                        <StackPanel>
+                            <Grid Classes="GroupHeader">
+                                <TextBlock Text="TOGGLE SWITCH"/>
+                            </Grid>
+                            <StackPanel Margin="12,0,12,12" Spacing="12" Orientation="Horizontal">
+                                <ToggleSwitch/>
+                                <ToggleSwitch IsChecked="True"/>
+                                <ToggleSwitch IsEnabled="False"/>
+                                <ToggleSwitch IsEnabled="False" IsChecked="True"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <StackPanel>
+                    <Border Classes="Group">
+                        <StackPanel>
+                            <Grid Classes="GroupHeader">
+                                <TextBlock Text="SPINNER"/>
+                            </Grid>
+                            <StackPanel Margin="12,0,12,12" Orientation="Horizontal" Spacing="12">
+                                <vkui:Spinner Size="Small"/>
+                                <vkui:Spinner Size="Medium"/>
+                                <vkui:Spinner Size="Large"/>
+                                <vkui:Spinner Size="ExtraLarge"/>
+                            </StackPanel>
                         </StackPanel>
                     </Border>
                 </StackPanel>

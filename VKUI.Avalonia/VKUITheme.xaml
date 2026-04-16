@@ -54,4 +54,5 @@
   <StyleInclude Source="/Styles/RadioButtonStylesCompact.axaml"/>
   <StyleInclude Source="/Styles/TabStyles.xaml"/>
   <StyleInclude Source="/Styles/TextBoxStylesCompact.axaml"/>
+  <StyleInclude Source="/Styles/ToggleSwitchStylesCompact.axaml"/>
 </Styles>

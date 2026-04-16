@@ -47,7 +47,7 @@
         </Setter>
 
         <Style Selector="^:disabled /template/ Grid#PART_Root">
-            <Setter Property="Opacity" Value="0.64"/>
+            <Setter Property="Opacity" Value="{StaticResource VKOpacityDisable}"/>
         </Style>     
 
         <!-- Colors -->

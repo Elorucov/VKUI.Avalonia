@@ -18,4 +18,6 @@ The library contains styles and components for many controls, however only the f
 * `CheckBox`
 * `ComboBox`
 * `RadioButton`
+* `Spinner`
 * `TextBox`
+* `ToggleSwitch`
