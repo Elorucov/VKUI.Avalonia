@@ -2,13 +2,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:controls="using:VKUI.Controls">
   <Design.PreviewWith>
-    <controls:Spinner Width="44" Height="44"/>
+    <controls:Spinner Size="ExtraLarge"/>
   </Design.PreviewWith>
 
   <ControlTheme x:Key="{x:Type controls:Spinner}" TargetType="controls:Spinner">
-    <Setter Property="Foreground" Value="{DynamicResource VKColorIconAccent}"/>
-    <Setter Property="Width" Value="16"/>
-    <Setter Property="Height" Value="16"/>
+    <Setter Property="Foreground" Value="{DynamicResource VKColorIconMedium}"/>
     <Setter Property="RenderTransform">
       <Setter.Value>
         <RotateTransform/>
@@ -16,9 +14,7 @@
     </Setter>
     <Setter Property="Template">
       <ControlTemplate>
-        <Viewbox x:Name="viewBox" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}" Stretch="Uniform">
-          <controls:VKIcon x:Name="Icon" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}"/>
-        </Viewbox>
+        <controls:VKIcon x:Name="Icon" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="{TemplateBinding Foreground}"/>
       </ControlTemplate>
     </Setter>
     
