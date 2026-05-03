@@ -229,6 +229,21 @@
                         </StackPanel>
                     </Border>
                 </StackPanel>
+                <StackPanel>
+                    <Border Classes="Group">
+                        <StackPanel>
+                            <Grid Classes="GroupHeader">
+                                <TextBlock Text="NOTIFICATIONS"/>
+                            </Grid>
+                            <StackPanel Margin="12,0,12,12" Orientation="Horizontal" Spacing="12">
+                                <Button Content="Information" Click="ShowDefaultNotification"/>
+                                <Button Content="Success" Classes="Primary Positive" Click="ShowSuccessNotification"/>
+                                <Button Content="Warning" Classes="Secondary Negative" Click="ShowWarningNotification"/>
+                                <Button Content="Error" Classes="Primary Negative" Click="ShowErrorNotification"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
             </StackPanel>
         </Grid>
     </ScrollViewer>

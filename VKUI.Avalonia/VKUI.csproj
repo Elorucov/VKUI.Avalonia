@@ -41,7 +41,6 @@
     <None Remove="Controls\VKIcon.xaml" />
     <None Remove="Controls\VKUIFlyoutPresenter.xaml" />
     <None Remove="Controls\WindowNotificationManager.xaml" />
-    <None Remove="Controls\WindowTitleBar.xaml" />
     <None Remove="Fonts\VKSansDisplay-Bold.otf" />
     <None Remove="Fonts\VKSansDisplay-Regular.otf" />
     <None Remove="Fonts\VKSansText-Bold.ttf" />
@@ -67,9 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia.Controls.ItemsRepeater" Version="12.0.0" />
-    <PackageReference Include="Avalonia.Themes.Simple" Version="12.0.1" />
-    <PackageReference Include="Avalonia" Version="12.0.1" />
-    <PackageReference Include="Avalonia.Desktop" Version="12.0.1" />
+    <PackageReference Include="Avalonia.Themes.Simple" Version="12.0.2" />
+    <PackageReference Include="Avalonia" Version="12.0.2" />
+    <PackageReference Include="Avalonia.Desktop" Version="12.0.2" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +136,9 @@
     <AvaloniaResource Update="Controls\TextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaResource>
+    <AvaloniaResource Update="Controls\Window.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
     <AvaloniaResource Update="Controls\WindowNotificationManager.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaResource>
@@ -159,9 +161,6 @@
     </Compile>
     <Compile Update="Controls\VKUIFlyoutPresenter.xaml.cs">
       <DependentUpon>Controls\VKUIFlyoutPresenter.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Controls\WindowTitleBar.xaml.cs">
-      <DependentUpon>Controls\WindowTitleBar.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

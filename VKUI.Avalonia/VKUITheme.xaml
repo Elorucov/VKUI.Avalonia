@@ -10,9 +10,6 @@
       <BoxShadows x:Key="VKElevation4">0 0 8 #1F000000, 0 16 16 #29000000</BoxShadows>
 
       <x:Double x:Key="TextDefaultLetterSpacing">-0.2</x:Double>
-
-      <!-- To remove margin in NavigationControl -->
-      <Thickness x:Key="NavigationControlPageMargin">0</Thickness>
       
       <ResourceDictionary.MergedDictionaries>
         <ResourceInclude Source="avares://VKUI/Tokens/Fonts.axaml"/>
@@ -39,8 +36,8 @@
         <ResourceInclude Source="avares://VKUI/Controls/ToggleSwitch.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/VKIcon.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/VKUIFlyoutPresenter.xaml" />
-        <ResourceInclude Source="avares://VKUI/Controls/WindowTitleBar.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/WindowNotificationManager.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/Window.xaml" />
       </ResourceDictionary.MergedDictionaries>
     </ResourceDictionary>
   </Styles.Resources>

@@ -1,10 +1,8 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
-using Avalonia.Controls.Shapes;
 using Avalonia.Interactivity;
 using Avalonia.Media;
-using Avalonia.Media.Imaging;
 using System;
 using System.Diagnostics;
 
@@ -45,7 +43,7 @@ namespace VKUI.Controls
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
             base.OnApplyTemplate(e);
-            
+
             ImagePresenter = e.NameScope.Find<Image>(nameof(ImagePresenter));
             ImagePresenter.SizeChanged += FixClip;
             ImagePresenter.Unloaded += OnUnloaded;

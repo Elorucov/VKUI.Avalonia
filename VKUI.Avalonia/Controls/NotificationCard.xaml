@@ -76,16 +76,16 @@
     </Style>
 
     <Style Selector="^:success /template/ vkui|VKIcon#Icon">
-      <Setter Property="Foreground" Value="{DynamicResource VKDynamicGreenBrush}"/>
+      <Setter Property="Foreground" Value="{DynamicResource VKColorAccentGreen}"/>
       <Setter Property="Id" Value="{x:Static vkui:VKIconNames.Icon28CheckCircleOutline}"/>
     </Style>
 
     <Style Selector="^:warning /template/ vkui|VKIcon#Icon">
-      <Setter Property="Foreground" Value="{DynamicResource VKDynamicOrangeBrush}"/>
+      <Setter Property="Foreground" Value="{DynamicResource VKColorAccentOrange}"/>
     </Style>
 
     <Style Selector="^:error /template/ vkui|VKIcon#Icon">
-      <Setter Property="Foreground" Value="{DynamicResource VKDynamicRedBrush}"/>
+      <Setter Property="Foreground" Value="{DynamicResource VKColorAccentRed}"/>
       <Setter Property="Id" Value="{x:Static vkui:VKIconNames.Icon28ErrorCircleOutline}"/>
     </Style>
   </ControlTheme>

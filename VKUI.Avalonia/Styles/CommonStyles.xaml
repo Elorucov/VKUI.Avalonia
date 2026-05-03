@@ -32,11 +32,6 @@
 
   <!-- Common styles for some elements -->
 
-  <Style Selector="Window">
-    <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContent}"/>
-    <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimary}"/>
-  </Style>
-
   <Style Selector="Window.Dialog">
     <Setter Property="CanResize" Value="False"/>
     <Setter Property="ShowInTaskbar" Value="False"/>
