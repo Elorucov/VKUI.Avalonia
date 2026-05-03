@@ -2,6 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
 using Avalonia.Controls.Shapes;
+using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using System;
@@ -15,16 +16,16 @@ namespace VKUI.Controls
 
         #region Properties
 
-        public static readonly StyledProperty<Bitmap> ImageProperty =
-            AvaloniaProperty.Register<Avatar, Bitmap>(nameof(Image));
+        public static readonly StyledProperty<IImage> ImageSourceProperty =
+            AvaloniaProperty.Register<Avatar, IImage>(nameof(Image));
 
         public static readonly StyledProperty<string> InitialsProperty =
             AvaloniaProperty.Register<Avatar, string>(nameof(Initials));
 
-        public Bitmap Image
+        public IImage ImageSource
         {
-            get => GetValue(ImageProperty);
-            set => SetValue(ImageProperty, value);
+            get => GetValue(ImageSourceProperty);
+            set => SetValue(ImageSourceProperty, value);
         }
 
         public string Initials
@@ -37,22 +38,32 @@ namespace VKUI.Controls
 
         #region Template elements
 
-        Ellipse ImageEllipse;
+        Image ImagePresenter;
 
         #endregion
 
         protected override void OnApplyTemplate(TemplateAppliedEventArgs e)
         {
             base.OnApplyTemplate(e);
-            ImageEllipse = e.NameScope.Find<Ellipse>(nameof(ImageEllipse));
+            
+            ImagePresenter = e.NameScope.Find<Image>(nameof(ImagePresenter));
+            ImagePresenter.SizeChanged += FixClip;
+            ImagePresenter.Unloaded += OnUnloaded;
+
             SetImage();
+        }
+
+        private void OnUnloaded(object sender, RoutedEventArgs e)
+        {
+            ImagePresenter.SizeChanged -= FixClip;
+            ImagePresenter.Unloaded -= OnUnloaded;
         }
 
         protected override void OnPropertyChanged(AvaloniaPropertyChangedEventArgs change)
         {
             base.OnPropertyChanged(change);
 
-            if (change.Property == ImageProperty)
+            if (change.Property == ImageSourceProperty)
             {
                 if (change.OldValue != change.NewValue) SetImage();
             }
@@ -60,22 +71,31 @@ namespace VKUI.Controls
             if (change.Property == BoundsProperty) SetImage();
         }
 
+        private void FixClip(object sender, SizeChangedEventArgs e)
+        {
+            var geometry = (sender as Image).Clip as EllipseGeometry;
+
+            geometry.Center = new Point(e.NewSize.Width / 2, e.NewSize.Height / 2);
+            geometry.RadiusX = e.NewSize.Width / 2;
+            geometry.RadiusY = e.NewSize.Height / 2;
+        }
+
         private void SetImage()
         {
-            if (ImageEllipse == null) return;
+            if (ImagePresenter == null) return;
             double size = Math.Min(Bounds.Width, Bounds.Height);
-            ImageEllipse.Width = size;
-            ImageEllipse.Height = size;
+            ImagePresenter.Width = size;
+            ImagePresenter.Height = size;
 
-            if (Image == null)
+            if (ImageSource == null)
             {
-                ImageEllipse.Fill = null;
+                ImagePresenter.Source = null;
                 return;
             }
 
             try
             {
-                ImageEllipse.Fill = new ImageBrush(Image);
+                ImagePresenter.Source = ImageSource;
             }
             catch (Exception ex)
             {

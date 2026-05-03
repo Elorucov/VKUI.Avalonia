@@ -6,6 +6,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
   </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Assets\elor.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <AvaloniaResource Include="Assets\elor.jpg" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="12.0.1" />

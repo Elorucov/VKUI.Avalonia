@@ -72,6 +72,36 @@
                         </StackPanel>
                     </Border>
                 </StackPanel>
+                <StackPanel>
+                    <Border Classes="Group">
+                        <StackPanel>
+                            <Grid Classes="GroupHeader">
+                                <TextBlock Text="AVATAR"/>
+                            </Grid>
+                            <StackPanel Margin="12,0,12,12" Spacing="12" Orientation="Horizontal">
+                                <StackPanel.Styles>
+									<Style Selector="vkui|Avatar">
+										<Setter Property="VerticalAlignment" Value="Top"/>
+                                    </Style>
+                                </StackPanel.Styles>
+								<StackPanel Orientation="Horizontal" Spacing="12">
+                                    <vkui:Avatar Initials="EO" Width="32" Height="32"/>
+                                    <vkui:Avatar Initials="EO" Width="48" Height="48"/>
+                                    <vkui:Avatar Initials="EO" Width="56" Height="56"/>
+                                </StackPanel>
+								<StackPanel Orientation="Horizontal" Spacing="12">
+                                    <StackPanel.Styles>
+									    <Style Selector="vkui|Avatar">
+                                        </Style>
+                                    </StackPanel.Styles>
+                                    <vkui:Avatar Initials="EO" Width="32" Height="32" ImageSource="avares://VKUI.Avalonia.Demo/Assets/elor.jpg"/>
+                                    <vkui:Avatar Initials="EO" Width="48" Height="48" ImageSource="avares://VKUI.Avalonia.Demo/Assets/elor.jpg"/>
+                                    <vkui:Avatar Initials="EO" Width="56" Height="56" ImageSource="avares://VKUI.Avalonia.Demo/Assets/elor.jpg"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
             </StackPanel>
             <StackPanel Grid.Column="1" Grid.Row="1">
                 <StackPanel Spacing="12">
