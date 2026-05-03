@@ -1,6 +1,7 @@
-<ResourceDictionary xmlns="https://github.com/avaloniaui"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:converters="clr-namespace:Avalonia.Controls.Converters;assembly=Avalonia.Controls">
+<ResourceDictionary
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  x:ClassModifier="internal">
   <Design.PreviewWith>
     <ScrollViewer Width="200" Height="200"
                   HorizontalScrollBarVisibility="Auto">
@@ -18,8 +19,6 @@
     </ScrollViewer>
   </Design.PreviewWith>
 
-  <StaticResource x:Key="ScrollViewerScrollBarsSeparatorBackground" ResourceKey="VKColorBackgroundContrastSecondaryAlpha" />
-
   <ControlTheme x:Key="{x:Type ScrollViewer}" TargetType="ScrollViewer">
     <Setter Property="Background" Value="Transparent" />
     <Setter Property="Template">
@@ -28,13 +27,13 @@
           <ScrollContentPresenter Name="PART_ContentPresenter"
                                   Grid.Row="0"
                                   Grid.Column="0"
-                                  Grid.RowSpan="2"
-                                  Grid.ColumnSpan="2"
                                   Background="{TemplateBinding Background}"
-                                  Content="{TemplateBinding Content}"
+                                  HorizontalSnapPointsType="{TemplateBinding HorizontalSnapPointsType}"
+                                  VerticalSnapPointsType="{TemplateBinding VerticalSnapPointsType}"
+                                  HorizontalSnapPointsAlignment="{TemplateBinding HorizontalSnapPointsAlignment}"
+                                  VerticalSnapPointsAlignment="{TemplateBinding VerticalSnapPointsAlignment}"
                                   Padding="{TemplateBinding Padding}"
-                                  Offset="{TemplateBinding Offset, Mode=TwoWay}"
-                                  IsScrollChainingEnabled="{TemplateBinding IsScrollChainingEnabled}">
+                                  ScrollViewer.IsScrollInertiaEnabled="{TemplateBinding IsScrollInertiaEnabled}">
             <ScrollContentPresenter.GestureRecognizers>
               <ScrollGestureRecognizer CanHorizontallyScroll="{Binding CanHorizontallyScroll, ElementName=PART_ContentPresenter}"
                                        CanVerticallyScroll="{Binding CanVerticallyScroll, ElementName=PART_ContentPresenter}"
@@ -42,25 +41,15 @@
             </ScrollContentPresenter.GestureRecognizers>
           </ScrollContentPresenter>
           <ScrollBar Name="PART_HorizontalScrollBar"
-                     AllowAutoHide="{TemplateBinding AllowAutoHide}"
                      Orientation="Horizontal"
-                     LargeChange="{Binding LargeChange.Width, RelativeSource={RelativeSource TemplatedParent}}"
-                     SmallChange="{Binding SmallChange.Width, RelativeSource={RelativeSource TemplatedParent}}"
-                     Visibility="{TemplateBinding HorizontalScrollBarVisibility}"
-                     Grid.Row="1"
-                     Focusable="False" />
+                     Grid.Row="1"/>
           <ScrollBar Name="PART_VerticalScrollBar"
-                     AllowAutoHide="{TemplateBinding AllowAutoHide}"
                      Orientation="Vertical"
-                     LargeChange="{Binding LargeChange.Height, RelativeSource={RelativeSource TemplatedParent}}"
-                     SmallChange="{Binding SmallChange.Height, RelativeSource={RelativeSource TemplatedParent}}"
-                     Visibility="{TemplateBinding VerticalScrollBarVisibility}"
-                     Grid.Column="1"
-                     Focusable="False" />
+                     Grid.Column="1"/>
           <Panel x:Name="PART_ScrollBarsSeparator"
                  Grid.Row="1"
                  Grid.Column="1"
-                 Background="{DynamicResource ScrollViewerScrollBarsSeparatorBackground}"
+                 Background="Red"
                  Opacity="0">
             <Panel.Transitions>
               <Transitions>
@@ -73,6 +62,10 @@
     </Setter>
     <Style Selector="^[IsExpanded=true] /template/ Panel#PART_ScrollBarsSeparator">
       <Setter Property="Opacity" Value="1" />
+    </Style>
+    <Style Selector="^[AllowAutoHide=True] /template/ ScrollContentPresenter#PART_ContentPresenter">
+      <Setter Property="Grid.ColumnSpan" Value="2" />
+      <Setter Property="Grid.RowSpan" Value="2" />
     </Style>
   </ControlTheme>
 </ResourceDictionary>
