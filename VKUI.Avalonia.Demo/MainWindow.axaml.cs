@@ -2,6 +2,7 @@ using Avalonia.Controls;
 using Avalonia.Controls.Notifications;
 using Avalonia.Interactivity;
 using System;
+using System.Threading.Tasks;
 
 namespace VKUI.Avalonia.Demo
 {

@@ -17,7 +17,13 @@ The library contains styles and components for many controls, however only the f
 * `Button`
 * `CheckBox`
 * `ComboBox`
+* `NotificationCard`
 * `RadioButton`
 * `Spinner`
 * `TextBox`
 * `ToggleSwitch`
+
+Available and ready-to-use controls:
+
+* `Avatar`
+* `Spinner`

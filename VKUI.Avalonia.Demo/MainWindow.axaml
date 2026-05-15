@@ -16,7 +16,7 @@
         </Style>
     </Window.Styles>
     <ScrollViewer>
-        <Grid ColumnDefinitions="* *" RowDefinitions="Auto Auto" MaxWidth="1280" VerticalAlignment="Top" Margin="6">
+        <Grid ColumnDefinitions="* *" RowDefinitions="Auto Auto" MaxWidth="1280" VerticalAlignment="Top" Margin="6,6,6,66">
             <StackPanel Grid.ColumnSpan="2">
                 <Border Classes="Group">
                     <StackPanel MinHeight="44">
@@ -98,6 +98,40 @@
                                     <vkui:Avatar Initials="EO" Width="48" Height="48" ImageSource="avares://VKUI.Avalonia.Demo/Assets/elor.jpg"/>
                                     <vkui:Avatar Initials="EO" Width="56" Height="56" ImageSource="avares://VKUI.Avalonia.Demo/Assets/elor.jpg"/>
                                 </StackPanel>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </StackPanel>
+                <StackPanel>
+                    <Border Classes="Group">
+                        <StackPanel>
+                            <Grid Classes="GroupHeader">
+                                <TextBlock Text="FLYOUT"/>
+                            </Grid>
+                            <StackPanel Margin="12,0,12,12" Orientation="Horizontal" Spacing="12">
+                                <Button Content="Default">
+                                    <Button.Flyout>
+										<Flyout Placement="Top">
+											<TextBlock>Lorem ipsum dolor sit amet, the quick brown fox jumps over the lazy dog.</TextBlock>
+                                        </Flyout>
+                                    </Button.Flyout>
+                                </Button>
+                                <Button Content="Menu">
+                                    <Button.Flyout>
+										<MenuFlyout Placement="Top">
+											<MenuItem Header="Cut"/>
+											<MenuItem Header="Copy"/>
+											<MenuItem Header="Paste"/>
+                                            <MenuItem Header="-"/>
+											<MenuItem Header="Delete">
+                                                <MenuItem Header="For me"/>
+                                                <MenuItem Header="For all"/>
+                                                <MenuItem Header="-"/>
+                                                <MenuItem Header="Spam"/>
+                                            </MenuItem>
+                                        </MenuFlyout>
+                                    </Button.Flyout>
+                                </Button>
                             </StackPanel>
                         </StackPanel>
                     </Border>

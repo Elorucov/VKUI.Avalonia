@@ -13,7 +13,7 @@
               <CheckBox Margin="12,0" Content="Lena" IsEnabled="False"/>
               <CheckBox Margin="12,0" Content="Nastya" IsChecked="True"/>
 
-              <Rectangle Margin="12,6" Classes="Separator"/>
+              <Separator Margin="12,6"/>
 
               <RadioButton Margin="12,0" GroupName="TestBest" Content="Anna"/>
               <RadioButton Margin="12,0" GroupName="TestBest" Content="Lena" IsEnabled="False"/>
@@ -47,31 +47,6 @@
     <Setter Property="BorderBrush" Value="{DynamicResource VKontakteColorModalCardBorderAlpha}"/>
     <Setter Property="CornerRadius" Value="8"/>
   </Style>-->
-
-  <Style Selector="Separator">
-    <Setter Property="Height" Value="0.5" />
-    <Setter Property="Background" Value="{DynamicResource VKColorSeparatorPrimary}" />
-    <Setter Property="Margin" Value="12,0" />
-    <Setter Property="HorizontalAlignment" Value="Stretch" />
-  </Style>
-
-  <Style Selector="Rectangle.Separator">
-    <Setter Property="Fill" Value="{DynamicResource VKColorSeparatorPrimary}" />
-    <Setter Property="Height" Value="0.5" />
-    <Setter Property="Margin" Value="0,6" />
-    <Setter Property="HorizontalAlignment" Value="Stretch" />
-  </Style>
-
-  <Style Selector="Rectangle.ActionSheetSeparator">
-    <Setter Property="Fill" Value="{DynamicResource VKontakteColorActionSheetSeparatorAlpha}" />
-    <Setter Property="Height" Value="0.5" />
-    <Setter Property="Margin" Value="12,4" />
-    <Setter Property="HorizontalAlignment" Value="Stretch" />
-  </Style>
-
-  <Style Selector="vkui|VKUIFlyoutPresenter Rectangle.Separator">
-    <Setter Property="Margin" Value="18,6" />
-  </Style>
 
   <!-- VKUI Group -->
 

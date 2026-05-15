@@ -28,7 +28,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove=".gitignore" />
-    <None Remove="Controls\ActionSheetItem.xaml" />
     <None Remove="Controls\Avatar.xaml" />
     <None Remove="Controls\Button.xaml" />
     <None Remove="Controls\CarouselEx.xaml" />
@@ -39,7 +38,6 @@
     <None Remove="Controls\ScrollViewer.xaml" />
     <None Remove="Controls\Spinner.xaml" />
     <None Remove="Controls\VKIcon.xaml" />
-    <None Remove="Controls\VKUIFlyoutPresenter.xaml" />
     <None Remove="Controls\WindowNotificationManager.xaml" />
     <None Remove="Fonts\VKSansDisplay-Bold.otf" />
     <None Remove="Fonts\VKSansDisplay-Regular.otf" />
@@ -124,6 +122,15 @@
     <AvaloniaResource Update="Controls\ComboBoxItem.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaResource>
+    <AvaloniaResource Update="Controls\FlyoutPresenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\MenuFlyoutPresenter.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\MenuItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
     <AvaloniaResource Update="Controls\RadioButton.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaResource>
@@ -132,6 +139,9 @@
     </AvaloniaResource>
     <AvaloniaResource Update="Controls\ScrollViewer.xaml">
       <Generator></Generator>
+    </AvaloniaResource>
+    <AvaloniaResource Update="Controls\Separator.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </AvaloniaResource>
     <AvaloniaResource Update="Controls\TextBox.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -158,9 +168,6 @@
     </Compile>
     <Compile Update="Controls\VKIcon.xaml.cs">
       <DependentUpon>Controls\VKIcon.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Controls\VKUIFlyoutPresenter.xaml.cs">
-      <DependentUpon>Controls\VKUIFlyoutPresenter.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

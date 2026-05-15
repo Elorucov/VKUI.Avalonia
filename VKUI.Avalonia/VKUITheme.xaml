@@ -17,7 +17,6 @@
         <ResourceInclude Source="avares://VKUI/Tokens/Colors.axaml"/>
         <ResourceInclude Source="avares://VKUI/Icons.xaml"/>
 
-        <ResourceInclude Source="avares://VKUI/Controls/ActionSheetItem.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/Avatar.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/Button.xaml"/>
         <ResourceInclude Source="avares://VKUI/Controls/CarouselEx.xaml" />
@@ -25,17 +24,20 @@
         <ResourceInclude Source="avares://VKUI/Controls/CheckBox.xaml"/>
         <ResourceInclude Source="avares://VKUI/Controls/ComboBox.xaml"/>
         <ResourceInclude Source="avares://VKUI/Controls/ComboBoxItem.xaml"/>
+        <ResourceInclude Source="avares://VKUI/Controls/FlyoutPresenter.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/MenuFlyoutPresenter.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/MenuItem.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/NotificationCard.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/PanelHeader.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/Placeholder.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/RadioButton.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/ScrollBar.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/ScrollViewer.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/Separator.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/Spinner.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/TextBox.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/ToggleSwitch.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/VKIcon.xaml" />
-        <ResourceInclude Source="avares://VKUI/Controls/VKUIFlyoutPresenter.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/WindowNotificationManager.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/Window.xaml" />
       </ResourceDictionary.MergedDictionaries>
