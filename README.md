@@ -19,6 +19,7 @@ The library contains styles and components for many controls, however only the f
 * `ComboBox`
 * `NotificationCard`
 * `RadioButton`
+* `Separator`
 * `Spinner`
 * `TextBox`
 * `ToggleSwitch`
