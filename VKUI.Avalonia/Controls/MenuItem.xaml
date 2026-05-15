@@ -66,14 +66,13 @@
                   Fill="{DynamicResource VKColorIconSecondary}" />
             <Popup Name="PART_Popup"
                    IsLightDismissEnabled="False"
-                   IsOpen="{TemplateBinding IsSubMenuOpen,
-                                            Mode=TwoWay}"
+                   IsOpen="{TemplateBinding IsSubMenuOpen, Mode=TwoWay}"
                    Placement="RightEdgeAlignedTop">
               <Border Background="{DynamicResource VKColorBackgroundContrastThemed}"
                       BorderBrush="{x:Null}"
                       BorderThickness="0"
                       CornerRadius="8"
-                      BoxShadow="{DynamicResource VKElevation3}">
+                      BoxShadow="{DynamicResource VKElevation3}" Margin="{StaticResource VKElevation3Margin}">
                 <ScrollViewer>
                   <ItemsPresenter Name="PART_ItemsPresenter"
                                   Margin="0,8"

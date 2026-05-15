@@ -1,4 +1,5 @@
 ﻿using Avalonia;
+using Avalonia.Rendering.Composition;
 using System;
 
 namespace VKUI.Avalonia.Demo
@@ -16,9 +17,9 @@ namespace VKUI.Avalonia.Demo
         public static AppBuilder BuildAvaloniaApp()
             => AppBuilder.Configure<App>()
                 .UsePlatformDetect()
-                .With<SkiaOptions>(new SkiaOptions
+                .With(new CompositionOptions()
                 {
-                    UseOpacitySaveLayer = true
+                    UseRegionDirtyRectClipping = true
                 })
                 .LogToTrace();
     }

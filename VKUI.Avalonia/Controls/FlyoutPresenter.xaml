@@ -19,7 +19,7 @@
                 BorderBrush="{TemplateBinding BorderBrush}"
                 BorderThickness="{TemplateBinding BorderThickness}"
                 CornerRadius="{TemplateBinding CornerRadius}"
-                BoxShadow="{DynamicResource VKElevation3}">
+                BoxShadow="{DynamicResource VKElevation3}" Margin="{StaticResource VKElevation3Margin}">
           <ScrollViewer HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
                         VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
             <ContentPresenter x:Name="PART_ContentPresenter"

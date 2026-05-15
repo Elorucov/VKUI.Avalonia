@@ -131,6 +131,9 @@
     <AvaloniaResource Update="Controls\MenuItem.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaResource>
+    <AvaloniaResource Update="Controls\PopupRoot.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </AvaloniaResource>
     <AvaloniaResource Update="Controls\RadioButton.xaml">
       <Generator>MSBuild:Compile</Generator>
     </AvaloniaResource>

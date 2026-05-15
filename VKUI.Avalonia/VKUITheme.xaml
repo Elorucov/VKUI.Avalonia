@@ -9,6 +9,8 @@
       <BoxShadows x:Key="VKElevation3">0 0 2 #14000000, 0 4 16 #14000000</BoxShadows>
       <BoxShadows x:Key="VKElevation4">0 0 8 #1F000000, 0 16 16 #29000000</BoxShadows>
 
+      <Thickness x:Key="VKElevation3Margin">16,12,16,20</Thickness>
+
       <x:Double x:Key="TextDefaultLetterSpacing">-0.2</x:Double>
       
       <ResourceDictionary.MergedDictionaries>
@@ -30,6 +32,7 @@
         <ResourceInclude Source="avares://VKUI/Controls/NotificationCard.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/PanelHeader.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/Placeholder.xaml" />
+        <ResourceInclude Source="avares://VKUI/Controls/PopupRoot.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/RadioButton.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/ScrollBar.xaml" />
         <ResourceInclude Source="avares://VKUI/Controls/ScrollViewer.xaml" />
@@ -50,6 +53,7 @@
   <StyleInclude Source="/Styles/CheckBoxStylesCompact.axaml"/>
   <StyleInclude Source="/Styles/ComboBoxStylesCompact.xaml"/>
   <StyleInclude Source="/Styles/ListBoxStyles.xaml"/>
+  <StyleInclude Source="/Styles/PopupRootStylesCompact.axaml"/>
   <StyleInclude Source="/Styles/RadioButtonStylesCompact.axaml"/>
   <StyleInclude Source="/Styles/TabStyles.xaml"/>
   <StyleInclude Source="/Styles/TextBoxStylesCompact.axaml"/>

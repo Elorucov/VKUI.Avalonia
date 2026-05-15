@@ -7,7 +7,6 @@
     <Setter Property="Background" Value="{DynamicResource VKColorBackgroundContent}" />
     <Setter Property="TransparencyBackgroundFallback" Value="{DynamicResource VKColorBackground}" />
     <Setter Property="Foreground" Value="{DynamicResource VKColorTextPrimary}" />
-    <Setter Property="FontSize" Value="{StaticResource VKParagraphRegularFontSize}" />
     <Setter Property="Template">
       <ControlTemplate>
         <Panel>
