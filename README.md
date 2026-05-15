@@ -17,6 +17,8 @@ The library contains styles and components for many controls, however only the f
 * `Button`
 * `CheckBox`
 * `ComboBox`
+* `Flyout`
+* `MenuFlyout`
 * `NotificationCard`
 * `RadioButton`
 * `Separator`
